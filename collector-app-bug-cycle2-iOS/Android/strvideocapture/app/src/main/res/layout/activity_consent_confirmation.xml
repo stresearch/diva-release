@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:id="@+id/consentParentLayout"
+    tools:context=".capturemodule.views.ConsentConfirmationActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/borderMargin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/borderMargin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <ImageView
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/extraLargeMargin"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toTopOf="@id/guideLineH1"
+        app:layout_constraintStart_toStartOf="@+id/guideLineV1" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/closeBtn"
+        android:layout_marginBottom="@dimen/extraLargeMargin"
+        android:src="@drawable/close_btn"
+        app:layout_constraintBottom_toTopOf="@id/guideLineH1"
+        app:layout_constraintEnd_toStartOf="@id/guidelineV2"/>
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:ems="10"
+        android:fontFamily="@font/poppinsextrabold"
+        android:maxLines="2"
+        android:text="@string/consentTitle"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/appTitleTextsize"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/consentConfirmationGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="consentSubjectSelection,subjectEmailLayout,confirmBtn,subjectListRecyclerView" />
+
+    <TextView
+        android:id="@+id/consentSubjectSelection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:layout_marginEnd="@dimen/xextraLargeMargin"
+        android:maxLines="3"
+        android:text="@string/consentDescription"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/regTextSize"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <TextView
+        android:id="@+id/learn_more_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxLines="3"
+        android:text="@string/learn_more_text"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@+id/consentSubjectSelection" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subjectEmailLayout"
+        style="@style/TextInputTypeOverride"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxHeight="40dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@+id/learn_more_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:paddingStart="@dimen/smallMargin"
+            android:paddingLeft="@dimen/smallMargin" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:background="@color/darkBlack"
+        android:fontFamily="@font/poppinsmedium"
+        android:padding="@dimen/largeMargin"
+        android:text="@string/confirm"
+        android:textColor="@color/textLightColor"
+        app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/subjectEmailLayout" />
+
+    <TextView
+        android:id="@+id/recentSubject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/recentSubjects"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/confirmBtn"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subjectListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/recentSubject" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="consentRecyclerView,agreeBtn,disagreeBtn,moreInfo"
+        android:id="@+id/consentAgreeDisagreeGroup"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/consentRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:orientation="horizontal"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toTopOf="@id/guideLineH2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+
+    <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/moreInfo"
+        android:padding="@dimen/minuteMargin"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/consentRecyclerView" />
+
+    <Button
+        android:id="@+id/agreeBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/yes_text"
+        android:background="@drawable/custom_black_border"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/moreInfo"
+        app:layout_constraintEnd_toStartOf="@id/disagreeBtn"/>
+
+    <Button
+        android:id="@+id/disagreeBtn"
+        android:layout_width="0dp"
+        android:text="@string/no_text"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:background="@drawable/custom_black_border"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintStart_toEndOf="@id/agreeBtn"
+        app:layout_constraintTop_toBottomOf="@id/moreInfo"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"/>
+
+
+    <androidx.constraintlayout.widget.Group
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/userResponseGroup"
+      android:visibility="gone"
+        app:constraint_referenced_ids="endConsentStatmentText,userConsentResponseBtn"/>
+
+    <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/guideLineV1"
+      app:layout_constraintBottom_toTopOf="@id/guideLineH2"
+      app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+      android:textSize="@dimen/regTextSize"
+      android:fontFamily="@font/poppinsregular"
+      android:id="@+id/endConsentStatmentText"
+      android:textAlignment="center"
+      android:layout_marginBottom="@dimen/largeMargin"/>
+
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/userConsentResponseBtn"
+      app:layout_constraintStart_toStartOf="@id/guideLineV1"
+      app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+      app:layout_constraintTop_toBottomOf="@id/guideLineH2"
+      android:text="@string/ok"
+      android:fontFamily="@font/poppinsmedium"
+      android:textSize="@dimen/regTextSize"
+      android:padding="@dimen/mediumMargin"
+      android:layout_marginTop="@dimen/xextraLargeMargin"
+      android:background="@color/darkBlack"
+      android:textColor="@color/textLightColor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

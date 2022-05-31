@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textLightColor"
+    tools:context=".dashboardmodule.view.CollectionFragment">
+
+    <com.visym.collector.utils.MyDrawerLayout
+        android:id="@+id/menuDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textLightColor">
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textLightColor"
+            tools:context=".capturemodule.views.CollectionsActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/borderMargin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/borderMargin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineH1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.13" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineH2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/guideLineH1"
+                app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1">
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <ImageView
+                     android:id="@+id/menuIcon"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="24dp"
+                     android:padding="@dimen/semiSmallMargin"
+                     android:src="@drawable/ic_menu2"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--<ImageView
+                    android:id="@+id/filterBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="65dp"
+
+                    android:src="@drawable/filter"
+                    />-->
+                 <androidx.appcompat.widget.SearchView
+                     android:id="@+id/searchImageBtn"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="end|center_vertical"
+                     android:layout_marginEnd="16dp"
+                     android:clickable="true"
+                     android:focusable="true"
+                     android:paddingStart="@dimen/mediumMargin"
+                     android:searchIcon="@drawable/search_icon"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:searchHintIcon="@null"
+                     tools:targetApi="lollipop" />
+
+                 <TextView
+                     android:id="@+id/cillectionh"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/poppinsextrabold"
+                     android:text="@string/collectionsTitle"
+                     android:textAlignment="center"
+                     android:textAllCaps="true"
+                     android:textColor="@color/darkBlack"
+                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                     android:visibility="visible"
+                     app:layout_constraintBottom_toBottomOf="@+id/menuIcon"
+                     app:layout_constraintEnd_toStartOf="@+id/searchImageBtn"
+                     app:layout_constraintStart_toEndOf="@+id/menuIcon"
+                     app:layout_constraintTop_toTopOf="@+id/menuIcon" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/collectionsListRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintTop_toBottomOf="@id/guideLineH2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:itemHorizontalPadding="27dp"
+            app:itemTextAppearance="@style/NavigationTheme"
+            app:headerLayout="@layout/header_layout"
+            style="@style/NavigationTheme"
+            app:menu="@menu/drawer_menu">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:clickable="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/footer_item_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Footer Item 1"
+                    android:layout_marginBottom="@dimen/extraLargeMargin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/termsOfUse"
+                    android:gravity="center"
+                    android:id="@+id/termsOfUse"
+                    />
+
+
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </com.visym.collector.utils.MyDrawerLayout>
+</FrameLayout>

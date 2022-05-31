@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usermodule.view.EmailVerificationActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       app:layout_constraintGuide_begin="25dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_btn"
+        android:padding="@dimen/largeMargin"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        android:id="@+id/closeBtn"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsextrabold"
+        android:text="@string/alMostDone"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/appTitleTextsize"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@id/guideline3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"
+        android:id="@+id/guideline4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verificationText"
+        android:text="@string/verificationText"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        style="@style/fontPoppinsMedium"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/userEmail"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/verificationText"
+        android:textColor="@color/goldColor"
+        android:maxLines="5"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        style="@style/fontPoppinsMedium" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/guideline3"
+      app:layout_constraintEnd_toEndOf="@id/guideline5"
+      app:layout_constraintBottom_toTopOf="@id/guideline6"
+      android:orientation="vertical"
+      android:layout_marginBottom="@dimen/mediumMargin">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/userResendEmailVerification"
+      android:text="@string/resend"
+        android:paddingTop="@dimen/extraSmallMargin"
+        android:paddingBottom="@dimen/extraSmallMargin"
+      style="@style/fontPoppinsMedium"/>
+        <View
+          android:layout_width="80dp"
+          android:layout_height="2dp"
+          android:background="@color/termsText"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        android:textColor="@color/termsText"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        android:text="@string/instructionText"
+        style="@style/fontPoppinsMedium"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

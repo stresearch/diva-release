@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <com.visym.collector.capturemodule.views.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/layer1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/center_box"
+            android:background="#000"
+            android:alpha="0.6"/>
+
+        <View
+            android:id="@+id/layer2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:layout_toEndOf="@id/center_box"
+            android:layout_below="@id/layer1"
+            android:layout_above="@id/layer3"
+            android:background="#000"/>
+
+        <ImageView
+            android:id="@+id/center_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/layer3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/center_box"
+            android:background="#000"/>
+
+        <View
+            android:id="@+id/layer4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:layout_below="@id/layer1"
+            android:layout_above="@id/layer3"
+            android:layout_toStartOf="@id/center_box"
+            android:background="#000"/>
+
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/video_capture_ui_layout"
+        android:layout_gravity="top"/>
+
+</FrameLayout>

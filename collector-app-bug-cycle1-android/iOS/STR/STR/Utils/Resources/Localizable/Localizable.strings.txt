@@ -1,0 +1,85 @@
+/* 
+  Localizable.strings
+  STR
+
+  Created by Srujan on 10/06/19.
+  
+*/
+
+//MARK: - Global
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Connection error" = "Connection error";
+"There was a problem, please try again." = "There was a problem, please try again.";
+"Offline error"= "Offline error";
+"Check your internet connection and try again." = "Check your internet connection and try again.";
+"Continue" = "Continue";
+"Log out" = "Log out";
+"Delete" = "Delete";
+" Back"= " Back";
+"Yes" = "Yes";
+"No" = "No";
+"Close" = "Close";
+"Are you sure you want to log out?" = "Are you sure you want to log out?";
+"Open Settings" = "Open Settings";
+"Location Access Disabled" = "Location Access Disabled";
+"Turn on Location Services to allow this App to determine your location." = "Turn on Location Services to allow this App to determine your location.";
+
+
+// MARK: - Register
+"First name" = "First name";
+"Last name"= "Last name";
+"Email" = "Email";
+"Phone" = "Phone";
+"Password" = "Password";
+"Company Code" = "Company Code";
+"Confirm password" = "Confirm password";
+"First name contains invalid characters." = "First name contains invalid characters.";
+"First name field is mandatory." = "First name field is mandatory.";
+"Last name contains invalid characters." = "Last name contains invalid characters.";
+"Last name field is mandatory." = "Last name field is mandatory.";
+"Please enter emails in the valid format." = "Please enter emails in the valid format.";
+"Email field is mandatory." = "Email field is mandatory.";
+"Invalid phone number." = "Invalid phone number.";
+"Phone field is mandatory." = "Phone field is mandatory.";
+"Password needs to have minimum 8 characters and 1 number, capital or special character" = "Password needs to have minimum 8 characters and 1 number, capital or special character";
+"Password field is mandatory." = "Password field is mandatory.";
+"Passwords don’t match." = "Passwords don’t match.";
+"Confirm password field is mandatory." = "Confirm password field is mandatory.";
+"Please complete all fields." = "Please complete all fields.";
+"You must agree to the terms and conditions before registering." = "You must agree to the terms and conditions before registering.";
+
+//MARK: - Password
+"An Email has been sent to recover your password" = "An Email has been sent to recover your password";
+s
+"Contacts" = "Contacts";
+"Add" = "Add";
+"Admin" = "Admin";
+"Accepted" = "Accepted";
+"Invited" = "Invited";
+"Cancelled" = "Cancelled";
+"Paused" = "Paused";
+
+
+//MARK: - Settings
+"Settings" = "Settings";
+"Profile" = "Profile";
+"FAQ" = "FAQ";
+"Send Feedback" = "Send Feedback";
+"Terms and conditions" = "Terms and conditions";
+"Privacy policy" = "Privacy policy";
+"About" = "About";
+
+//MARK: - Profile
+"Edit Profile"= "Edit Profile";
+"Old password" = "Old password";
+"New password" = "New password";
+"Confirm new password" = "Confirm new password";
+"Profile Updated" = "Profile Updated";
+"Old password field is mandatory." = "Old password field is mandatory.";
+"New password field is mandatory." = "New password field is mandatory.";
+
+
+
+
+

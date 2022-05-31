@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/extraLargeMargin">
+
+  <ImageView
+      android:id="@+id/videoImagePreview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      android:src="@drawable/vph1"
+      android:adjustViewBounds="true"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/durationText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/largeMargin"
+      android:background="@color/darkBlack"
+      android:fontFamily="@font/poppinsregular"
+      android:paddingStart="@dimen/minuteMargin"
+      android:paddingEnd="@dimen/minuteMargin"
+      android:textColor="@color/textLightColor"
+      android:textSize="@dimen/smallTextSize"
+      app:layout_constraintBottom_toBottomOf="@id/videoImagePreview"
+      app:layout_constraintRight_toRightOf="@id/videoImagePreview"
+      tools:text="0:30" />
+
+
+  <TextView
+      android:id="@+id/processingLabelText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:text="@string/processing_label"
+      android:textColor="@color/termsText"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@id/videoImagePreview"
+      app:layout_constraintTop_toTopOf="@id/videoImagePreview"
+      app:layout_constraintVertical_chainStyle="packed" />
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/customMargin"
+      android:src="@drawable/ic_processing"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@id/videoImagePreview"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/videoImagePreview"
+
+      />
+
+  <TextView
+      android:id="@+id/hashTag"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/mediumMargin"
+      android:fontFamily="@font/poppinsmedium"
+      android:text="@string/sampleHashTag"
+      android:textColor="@color/darkTextColor"
+      android:textSize="@dimen/regTextSize"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/videoImagePreview" />
+
+  <TextView
+      android:id="@+id/videoCategoryDescription"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="@dimen/minuteMargin"
+      android:layout_marginEnd="@dimen/extraLargeMargin"
+      android:layout_marginRight="@dimen/extraLargeMargin"
+      android:fontFamily="@font/poppinsregular"
+      android:visibility="gone"
+      android:textSize="@dimen/smallTextSize"
+      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/hashTag" />
+
+  <TextView
+      android:id="@+id/uploadedDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/poppinsregular"
+      android:hint="gndfogdoghodfigodfgodfigofi"
+      android:textSize="@dimen/smallTextSize"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/videoCategoryDescription" />
+
+  <ImageView
+      android:id="@+id/upVoteIcon"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/up_vote"
+      android:visibility="gone"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/uploadedDate" />
+
+  <TextView
+      android:id="@+id/upVotePercentage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:fontFamily="@font/poppinsregular"
+      android:text="@string/upVotePercentage"
+      android:textColor="@color/termsText"
+      android:textSize="9sp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@+id/upVoteIcon"
+      app:layout_constraintLeft_toRightOf="@id/upVoteIcon"
+      app:layout_constraintTop_toTopOf="@+id/upVoteIcon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

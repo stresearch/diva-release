@@ -1,0 +1,201 @@
+<resources>
+    <string name="app_name">Visym Collector</string>
+    <string name="APP_KEY">jh6u8qe1aqnun7q</string>
+    <string name="dumyTextSentence">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="dummyText"> To \nBe \nDesigned</string>
+    <string name="signUpText">Sign Up</string>
+    <string name="loginText">Login</string>
+    <string name="name">First Name</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confpassword">Re-enter Password</string>
+    <string name="signUpTerms">By signing up you agree to the</string>
+    <string name="termsText"><u>Terms of Service</u></string>
+    <string name="haveAccount">Already have a account</string>
+    <string name="userName">User name</string>
+    <string name="userPassword">Password</string>
+    <string name="forgotPassword">Forgot password?</string>
+    <string name="signInText">Sign In</string>
+    <string name="dontHaveAccount">Dont have a account?</string>
+    <string name="alMostDone">Almost Done!</string>
+    <string name="verificationText">A verification email has been sent to</string>
+    <string name="instructionText">Please follow the instruction in the verification email to finish creating your account</string>
+    <string name="forgotPasswordTitle">Forgot \nPassword?</string>
+    <string name="sendPassword">SEND OTP</string>
+    <string name="userSetup">Setup</string>
+    <string name="paypal">Paypal</string>
+    <string name="remove">Remove</string>
+    <string name="lorem">During the collection process, you may be asked to be an actor in a recorded video.  Prior to you being recorded, you must provide your consent</string>
+    <string name="iWillDoItLater">I will do it later</string>
+    <string name="skip">skip</string>
+    <string name="connect">Connect</string>
+    <string name="save">Save</string>
+    <string name="dropBoxConnectText">Connect your Dropbox account</string>
+    <string name="dropBox">Dropbox</string>
+    <string name="dummyEmail">me@here.com</string>
+    <string name="dummyUserName">Some User</string>
+    <string name="editAccount">Edit Account</string>
+    <string name="syncOverWifi">Sync over Wi-Fi Only</string>
+    <string name="payment">Payment</string>
+    <string name="wifiOnlyText"><![CDATA[Upload & download videos over Wi-Fi only]]></string>
+    <string name="helpAndSupport"><![CDATA[Help & Support]]></string>
+    <string name="signOutText">Sign-Out</string>
+    <string name="revokeConsent">Revoke Consent</string>
+    <string name="versionText">Version 1.59 | Terms of Use</string>
+    <string name="account">Account</string>
+    <string name="stats">Stats</string>
+    <string name="uploadedValue">0</string>
+    <string name="uploadDescriptionText">Uploaded</string>
+    <string name="verifiedDummy">148</string>
+    <string name="verifiedText">Verified</string>
+    <string name="notVerifiedDummy">10</string>
+    <string name="notVerifiedText">Not verified</string>
+    <string name="consentedDummyValue">8</string>
+    <string name="consented">Consented</string>
+    <string name="connectToPaypal">Connect to you Paypal acount</string>
+    <string name="amountRecieved">Amount received</string>
+    <string name="amountDummyValue">$150.00</string>
+    <string name="outstandingAmount">Outstanding amount</string>
+    <string name="outstandingAmountDummyValue">$1.50</string>
+    <string name="change">Change</string>
+    <string name="changePassword">Change password</string>
+    <string name="currentPassword">Current password</string>
+    <string name="newPassword">New Password</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="cancel">Cancel</string>
+    <string name="changeEmail">Change email</string>
+    <string name="newEmail">New email</string>
+    <string name="confirmEmail">Confirm email</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="changeUserName">Change username</string>
+    <string name="ok">OK</string>
+    <string name="verify">Verify</string>
+    <string name="capture_text">CAPTURE</string>
+    <string name="record_text">RECORD</string>
+    <string name="stop_text">STOP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="logoText">VISYM  \nCOLLECTOR</string>
+    <string name="frontScreenSentence">Collecting video datasets for training visual AI.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeScreenTitle">Collections</string>
+    <string name="noVideos">No Videos</string>
+    <string name="noRatingVideos">No Ratings.</string>
+    <string name="noVideosDescription">It seems you havent captured any  \n activities yet</string>
+    <string name="noRatingVideosDescription">You have completed all ratings assigned to you.  Nice job!</string>
+    <string name="captureActivity">Capture Activity</string>
+    <string name="sampleHashTag">#UUID</string>
+    <string name="status">Approved</string>
+    <string name="dummyVideoDescription">People talking, Person listing to music,Person Talking on phone, Person Texting on Phone</string>
+    <string name="upVotePercentage">80%</string>
+    <string name="ratingsTitle">Ratings</string>
+    <string name="projectTitle">Projects</string>
+    <string name="dummyProjectName">Project Name</string>
+    <string name="practiceProjectName">Practice Project</string>
+    <string name="dummyActivitiesCount">30 Activites</string>
+    <string name="collectionsTitle">Collections</string>
+    <string name="dummyCollectionName">Person Unloads Vehicles</string>
+    <string name="collectionHeading">Collections</string>
+    <string name="activitiesHeading">Activities</string>
+    <string name="next">Next</string>
+    <string name="collectionActivityTitle">Person Texting On Phone</string>
+    <string name="consentTitle">Consent</string>
+    <string name="consentDescription">Before collecting, we require that you receive consent from your subject in this video.</string>
+    <string name="confirm">Confirm</string>
+    <string name="recentSubjects">Recent Subjects</string>
+    <string name="moreInfo"><u>More Info</u></string>
+    <string name="disagreeText">I Disagree</string>
+    <string name="agreeText">I Agree</string>
+    <string name="start">Start</string>
+    <string name="dummyTimer">00:00</string>
+    <string name="stop">Stop</string>
+    <string name="providePermission">Permission missing</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="noInternet">You are offline</string>
+    <string name="internet">Back online</string>
+    <string name="emptyEmail">Email should not be empty</string>
+    <string name="emtpyPassword">Password should not be empty</string>
+    <string name="novalidEmail">Not a valid email id</string>
+    <string name="isRequired">Required field</string>
+    <string name="passwordMismatch">Password mismatch</string>
+    <string name="emailMismatch">Email mismatch</string>
+    <string name="passwordPattern">* * * * * * *</string>
+    <string name="tempPassword">Temporary password has been sent to the email: </string>
+    <string name="resend">Resend email</string>
+    <string name="practiceActivityCount">4 activities</string>
+    <string name="description">desc</string>
+    <string name="lockscreen_transport_play_description">Play</string>
+    <string name="lockscreen_transport_pause_description">Pause</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid video</string>
+    <string name="VideoView_error_text_unknown">Unknown Video Error</string>
+    <string name="VideoView_error_button">Error</string>
+    <string name="submit">Submit</string>
+    <string name="incorrectFilePath">Incorrect file path</string>
+    <string name="initial_timer_text">00:00</string>
+    <string name="invalid_email_message">Invalid email</string>
+    <string name="unknown_error_message">Something went wrong</string>
+    <string name="password_reset_hint">We will send you a One Time Password (OTP) to your email address to reset password</string>
+    <string name="enter_otp_text">ENTER OTP</string>
+    <string name="otp_text">OTP</string>
+    <string name="resend_otp_textview">RESEND OTP</string>
+    <string name="new_password_text">New password</string>
+    <string name="confirm_password_hint">Confirm password</string>
+    <string name="change_password_text">CHANGE PASSWORD</string>
+    <string name="otp_sent_hint">An OTP has been sent to your email address</string>
+    <string name="password_dot_hint">*********</string>
+    <string name="current_password_text">Current password</string>
+    <string name="delete">Delete</string>
+    <string name="delete_success">Successfully deleted !</string>
+    <string name="delete_failure">Delete unsuccessful</string>
+    <string name="noDataAvailable">No data available</string>
+    <string name="editConsent">Edit consent</string>
+    <string name="consentStatus">Consent pending</string>
+    <string name="consentSuccess">Consent uploaded successfully</string>
+    <string name="editConsentDescription">Your previously selected data, activity and preferences</string>
+    <string name="dataResponse">Dataset Release</string>
+    <string name="widget_labelled_spinner_errorText">You must choose an item.</string>
+    <string name="facerecognition">Face recognition usage</string>
+    <string name="retention">Retention</string>
+    <string name="processing_label">This collection is currently being processed. \n Please check back later</string>
+    <string name="videos_text">VIDEOS</string>
+    <string name="enter_email_text">Enter email</string>
+    <string name="consent_hint_text">Please select the record button, say \"I consent to this video collection\"</string>
+    <string name="training_video_hint_text">Your video should look similar to this example video.  Please collect from above looking down and keep your subject tight in the box</string>
+    <string name="learn_more_text">Learn More</string>
+    <string name="consent_description_text">Please enter or select your subject\'s email address.  If your subject has not yet consented for video recording, then we will guide them through the consent process with a sequence of questions to specify how we should handle their private data.  This is a one time procedure for each new subject, and the answers can be modified at any time.</string>
+    <string name="save_text">SAVE</string>
+    <string name="termsOfUse">Terms Of Use</string>
+    <string name="retakeVideoConsent">retake video consent</string>
+    <string name="noCollectionDescription">Collection description is not available</string>
+    <string name="share_email_hint_text">[Visym Collector]: Share video</string>
+    <string name="yes_text">YES</string>
+    <string name="no_text">NO</string>
+    <string name="download_failed_message">Download failed</string>
+    <string-array name="planets_array">
+        <item>Select one…</item>  <!-- Prompt item -->
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string-array name="plants">
+
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

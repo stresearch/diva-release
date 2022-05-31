@@ -1,0 +1,595 @@
+{
+  "projects": [
+    {
+      "projectId": "P001",
+      "title": "PRACTICE",
+      "collections": [
+        {
+          "collectionId": "P001C001",
+          "title": "Practice",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Activity 1",
+              "longText": "Activity 1"
+            },
+            {
+              "shortText": "Activity 2",
+              "longText": "Activity 2"
+            },
+            {
+              "shortText": "Activity 3",
+              "longText": "Activity 3"
+            },
+            {
+              "shortText": "Activity 4",
+              "longText": "Activity 4"
+            },
+            {
+              "shortText": "Activity 5",
+              "longText": "Activity 5"
+            },
+            {
+              "shortText": "Activity 6",
+              "longText": "Activity 6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "P002",
+      "title": "MEVA CAR",
+      "collections": [
+        {
+          "collectionId": "P002C001",
+          "title": "Enter and exit a CAR",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Vehicle Door"
+            },
+            {
+              "shortText": "Entering",
+              "longText": "Person Enters Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Vehicle Door"
+            },
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Vehicle Door"
+            },
+            {
+              "shortText": "Exiting",
+              "longText": "Person Exits Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Vehicle Door"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C002",
+          "title": "Load and unload something into trunk",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Trunk"
+            },
+            {
+              "shortText": "Loading",
+              "longText": "Person Loads Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Trunk"
+            },
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Trunk"
+            },
+            {
+              "shortText": "Unloading",
+              "longText": "Person Unloads Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Trunk"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C003",
+          "title": "Drive CAR with turns",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Turning left",
+              "longText": "Vehicle Turning Left"
+            },
+            {
+              "shortText": "Turning right",
+              "longText": "Vehicle Turning Right"
+            },
+            {
+              "shortText": "U-turn",
+              "longText": "Vehicle U-Turn"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C004",
+          "title": "Pickup person in CAR",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Stopping",
+              "longText": "Vehicle Stopping"
+            },
+            {
+              "shortText": "Picking up",
+              "longText": "Vehicle Picks Up Person"
+            },
+            {
+              "shortText": "Starting",
+              "longText": "Vehicle Starting"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C005",
+          "title": "Dropoff person from CAR",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Stopping",
+              "longText": "Vehicle Stopping"
+            },
+            {
+              "shortText": "Dropping off",
+              "longText": "Vehicle Drops Off Person"
+            },
+            {
+              "shortText": "Starting",
+              "longText": "Vehicle Starting"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C006",
+          "title": "Give and get something from a CAR",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Transferring",
+              "longText": "Object Transfer"
+            }
+          ]
+        },
+        {
+          "collectionId": "P002C007",
+          "title": "Drive CAR in reverse",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Reversing",
+              "longText": "Vehicle Reversing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "P003",
+      "title": "MEVA MOTORCYCLE",
+      "collections": [
+        {
+          "collectionId": "P003C001",
+          "title": "Enter and exit a MOTORCYCLE",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Vehicle Door"
+            },
+            {
+              "shortText": "Entering",
+              "longText": "Person Enters Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Vehicle Door"
+            },
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Vehicle Door"
+            },
+            {
+              "shortText": "Exiting",
+              "longText": "Person Exits Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Vehicle Door"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C002",
+          "title": "Load and unload something into trunk",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Trunk"
+            },
+            {
+              "shortText": "Loading",
+              "longText": "Person Loads Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Trunk"
+            },
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Trunk"
+            },
+            {
+              "shortText": "Unloading",
+              "longText": "Person Unloads Vehicle"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Trunk"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C003",
+          "title": "Drive MOTORCYCLE with turns",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Turning left",
+              "longText": "Vehicle Turning Left"
+            },
+            {
+              "shortText": "Turning right",
+              "longText": "Vehicle Turning Right"
+            },
+            {
+              "shortText": "U-turn",
+              "longText": "Vehicle U-Turn"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C004",
+          "title": "Pickup person in MOTORCYCLE",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Stopping",
+              "longText": "Vehicle Stopping"
+            },
+            {
+              "shortText": "Picking up",
+              "longText": "Vehicle Picks Up Person"
+            },
+            {
+              "shortText": "Starting",
+              "longText": "Vehicle Starting"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C005",
+          "title": "Dropoff person from MOTORCYCLE",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Stopping",
+              "longText": "Vehicle Stopping"
+            },
+            {
+              "shortText": "Dropping off",
+              "longText": "Vehicle Drops Off Person"
+            },
+            {
+              "shortText": "Starting",
+              "longText": "Vehicle Starting"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C006",
+          "title": "Give and get something from a MOTORCYCLE",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Transferring",
+              "longText": "Object Transfer"
+            }
+          ]
+        },
+        {
+          "collectionId": "P003C007",
+          "title": "Drive MOTORCYCLE in reverse",
+          "object": "Vehicle",
+          "activities": [
+            {
+              "shortText": "Reversing",
+              "longText": "Vehicle Reversing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "P004",
+      "title": "MEVA Person",
+      "collections": [
+        {
+          "collectionId": "P004C001",
+          "title": "Enter and exit a building door",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Facility Door"
+            },
+            {
+              "shortText": "Entering",
+              "longText": "Person Enters Through Structure"
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Facility Door"
+            },
+            {
+              "shortText": "Opening",
+              "longText": "Person Opens Facility Door"
+            },
+            {
+              "shortText": "Exiting",
+              "longText": "Person Exits Through Structure "
+            },
+            {
+              "shortText": "Closing",
+              "longText": "Person Closes Facility Door"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C002",
+          "title": "Enter and exit a building entrance",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Entering",
+              "longText": "Person Enters Through Structure"
+            },
+            {
+              "shortText": "Exiting",
+              "longText": "Person Exits Through Structure "
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C003",
+          "title": "Sit and read",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Sitting",
+              "longText": "Person Sitting Down"
+            },
+            {
+              "shortText": "Reading",
+              "longText": "Person Reading Document"
+            },
+            {
+              "shortText": "Standing",
+              "longText": "Person Standing Up"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C004",
+          "title": "Pickup and dropoff something",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Picking up",
+              "longText": "Person Picks Up Object"
+            },
+            {
+              "shortText": "Dropping off",
+              "longText": "Person Sets Down Object"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C005",
+          "title": "Leave something behind and walk away",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Abandoning",
+              "longText": "Person Abandons Package"
+            },
+            {
+              "shortText": "Sets down",
+              "longText": "Person Puts Down Object"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C006",
+          "title": "Carry a heavy object",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Carrying",
+              "longText": "Person Heavy Carry"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C007",
+          "title": "Talk and text on your phone",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Texting on",
+              "longText": "Person Texting on Phone"
+            },
+            {
+              "shortText": "Talking on",
+              "longText": "Person Talking on Phone"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C008",
+          "title": "Use a laptop",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Sitting",
+              "longText": "Person Sitting Down"
+            },
+            {
+              "shortText": "Using laptop",
+              "longText": "Person-Laptop Interaction "
+            },
+            {
+              "shortText": "Standing",
+              "longText": "Person Standing Up"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C008",
+          "title": "Purchase something from a machine",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Purchasing",
+              "longText": "Person Purchasing"
+            }
+          ]
+        },
+        {
+          "collectionId": "P004C009",
+          "title": "Pickup and dropoff with bike messenger",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Picking up",
+              "longText": "Person Picks Up Object"
+            },
+            {
+              "shortText": "Riding",
+              "longText": "Riding"
+            },
+            {
+              "shortText": "Dropping off",
+              "longText": "Person Sets Down Object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "P005",
+      "title": "MEVA Group",
+      "collections": [
+        {
+          "collectionId": "P005C001",
+          "title": "Give a high five then talk",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Touching hands",
+              "longText": "Hand Interaction"
+            },
+            {
+              "shortText": "Talking to",
+              "longText": "People Talking"
+            }
+          ]
+        },
+        {
+          "collectionId": "P005C002",
+          "title": "Steal something from your friend",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Stealing",
+              "longText": "Theft"
+            }
+          ]
+        },
+        {
+          "collectionId": "P005C003",
+          "title": "Purchase something from a cashier",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Purchasing",
+              "longText": "Person Purchasing"
+            }
+          ]
+        },
+        {
+          "collectionId": "P005C004",
+          "title": "Hand something to your friend",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Transferring",
+              "longText": "Object Transfer"
+            }
+          ]
+        },
+        {
+          "collectionId": "P005C005",
+          "title": "Hug then hold hands",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Hugging",
+              "longText": "Person-Person Embrace "
+            },
+            {
+              "shortText": "Touching hands",
+              "longText": "Hand Interaction"
+            }
+          ]
+        },
+        {
+          "collectionId": "P005C006",
+          "title": "Shake hands then talk",
+          "object": "Person",
+          "activities": [
+            {
+              "shortText": "Touching hands",
+              "longText": "Hand Interaction"
+            },
+            {
+              "shortText": "Talking to",
+              "longText": "People Talking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

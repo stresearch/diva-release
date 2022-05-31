@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usermodule.view.FrontScreenActivity">
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector_smart_object"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideLine3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <TextView
+        android:id="@+id/appTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsextrabold"
+        android:text="@string/logoText"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/appTitleTextsize"
+        android:layout_marginTop="@dimen/xxExtraLargeMargin"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideLine3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"
+        android:id="@+id/guideline2"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="25dp"
+        android:id="@+id/guideLine3"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLine4"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93"/>
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="366dp" />
+
+    <TextView
+        android:id="@+id/appDescriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/frontScreenSentence"
+        app:layout_constraintTop_toBottomOf="@id/appTitleText"
+        app:layout_constraintStart_toStartOf="@id/guideLine3"
+        app:layout_constraintEnd_toStartOf="@id/guideLine4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline6"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72"/>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/largeMargin"
+        android:text="@string/loginText"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/goldColor"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideLine4"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideLine3" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlack"
+        android:fontFamily="@font/poppinsmedium"
+        android:padding="@dimen/largeMargin"
+        android:text="@string/signUpText"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/regTextSize"
+        android:layout_marginTop="@dimen/extraSmallMargin"
+        app:layout_constraintEnd_toStartOf="@id/guideLine4"
+        app:layout_constraintStart_toStartOf="@id/guideLine3"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Collector" representedClassName=".Collector" syncable="YES">
+        <attribute name="changePassword" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="userId" attributeType="String"/>
+        <attribute name="verifiedRegistration" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="credentials" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Credentials"/>
+        <relationship name="driverSchedule" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Schedule"/>
+    </entity>
+    <entity name="Credentials" representedClassName=".Credentials" syncable="YES">
+        <attribute name="accessToken" optional="YES" attributeType="String"/>
+        <attribute name="refreshToken" optional="YES" attributeType="String"/>
+        <attribute name="tokenType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Schedule" representedClassName=".Schedule" syncable="YES">
+        <attribute name="day" attributeType="String"/>
+        <attribute name="endTime" attributeType="String"/>
+        <attribute name="isAvailable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="startTime" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Credentials" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Schedule" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Collector" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

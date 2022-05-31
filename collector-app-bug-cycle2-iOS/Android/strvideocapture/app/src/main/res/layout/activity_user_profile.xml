@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usermodule.view.UserProfileActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="25dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30"
+        android:id="@+id/guideLineV6"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="489dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.39"
+        android:id="@+id/guideLineH9"/>
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/mediumMargin"
+        android:src="@drawable/close_btn"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/selectLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_gold_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineV4"
+        app:layout_constraintStart_toStartOf="@+id/guideLineV3"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH1">
+
+        <TextView
+            android:id="@+id/accountBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/goldColor"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="@dimen/smallMargin"
+            android:text="@string/account"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/textLightColor"
+            android:textSize="@dimen/accountTextSize" />
+
+        <TextView
+            android:id="@+id/statsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="@dimen/smallMargin"
+            android:text="@string/stats"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/darkBlack"
+            android:textSize="@dimen/accountTextSize" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/dummyUserName"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH2" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        tools:text="@string/dummyEmail"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/regTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+
+    <TextView
+        android:id="@+id/editAccountBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingTop="@dimen/extraSmallMargin"
+        android:paddingBottom="@dimen/extraSmallMargin"
+        android:text="@string/editAccount"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/goldColor"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userEmail"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toTopOf="@+id/userName" />
+
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/payment"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/userEmail" />
+
+    <TextView
+        android:id="@+id/paypalEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/paypal"
+        android:visibility="visible"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/payment" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/paypalActionBtn"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/remove"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/goldColor"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toBottomOf="@id/editAccountBtn" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/paypalActionBtnTransparent"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/remove"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toBottomOf="@id/paypalActionBtn" />
+
+    <TextView
+        android:id="@+id/dropBoxOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/titleTextSize"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/dropBox"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/paypalEmail" />
+
+    <TextView
+        android:id="@+id/connectDropBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/connect"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/goldColor"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/dropBoxOption"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toTopOf="@+id/guideLineH4" />
+
+
+    <TextView
+        android:id="@+id/syncOverWifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/syncOverWifi"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/dropBoxOption" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/syncDescription"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/wifiOnlyText"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/syncOverWifi" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/syncSwitch"
+        android:layout_marginTop="@dimen/exextraLargeMargin"
+        android:clickable="false"
+        android:theme="@style/CustomAppTheme"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toBottomOf="@id/connectDropBox" />
+
+    <TextView
+        android:id="@+id/helpAndSupport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/helpAndSupport"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/syncDescription" />
+
+    <TextView
+        android:id="@+id/editConsent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/editConsent"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/largeMargin"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/helpAndSupport" />
+    <TextView
+        android:id="@+id/signOutBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/signOutText"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:paddingTop="@dimen/mediumMargin"
+        android:paddingBottom="@dimen/mediumMargin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/editConsent" />
+
+
+    <Button
+        android:id="@+id/revokeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/darkBlack"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/revokeConsent"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/titleTextSize"
+        android:paddingEnd="@dimen/titleTextSize"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/regTextSize"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineV2"
+        app:layout_constraintStart_toStartOf="@+id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/signOutBtn" />
+
+   <!-- <TextView
+        android:id="@+id/version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/versionText"
+        android:textAlignment="center"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV4"
+        app:layout_constraintStart_toStartOf="@id/guideLineV3"
+        app:layout_constraintTop_toBottomOf="@id/revokeBtn" />-->
+
+<androidx.constraintlayout.widget.Group
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/accountGroup"
+    android:visibility="visible"
+    app:constraint_referenced_ids="userName
+    ,userEmail,editAccountBtn,signOutBtn"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="uploadedValue,
+        uploadDesc,verifiedValue,verifiedText,
+        notVerifiedText,notVerifiedValue,
+        consentedValue,consentText"
+        android:visibility="gone"
+        android:id="@+id/statsGroup"/>
+
+    <TextView
+        android:id="@+id/uploadedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsextrabold"
+        android:text="160"
+        android:textAlignment="center"
+        android:maxHeight="93dp"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/statsUploadSize"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/selectLinearLayout"
+        app:layout_constraintBottom_toTopOf="@id/uploadDesc"/>
+
+    <TextView
+        android:id="@+id/uploadDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uploadDescriptionText"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/termsText"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/uploadedValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verifiedValue"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH9"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV6"
+        android:textSize="@dimen/appTitleTextsize"
+        android:textColor="@color/darkBlack"
+        android:fontFamily="@font/poppinsextrabold"
+        android:maxHeight="50dp"
+        android:text="@string/verifiedDummy"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/verifiedValue"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV6"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/verifiedText"
+        android:textColor="@color/termsText"
+        android:text="@string/verifiedText"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notVerifiedValue"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH9"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV6"
+        android:textSize="@dimen/appTitleTextsize"
+        android:textColor="@color/darkBlack"
+        android:fontFamily="@font/poppinsextrabold"
+        android:maxHeight="50dp"
+        android:text="@string/notVerifiedDummy"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/notVerifiedValue"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV6"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/smallTextSize"
+        android:text="@string/notVerifiedText"
+        android:id="@+id/notVerifiedText"
+        android:textColor="@color/termsText"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH9"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        android:textSize="@dimen/appTitleTextsize"
+        android:textColor="@color/darkBlack"
+        android:fontFamily="@font/poppinsextrabold"
+        android:text="@string/consentedDummyValue"
+        android:id="@+id/consentedValue"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/consentedValue"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        android:textSize="@dimen/smallTextSize"
+        android:textColor="@color/termsText"
+        android:fontFamily="@font/poppinsmedium"
+        android:id="@+id/consentText"
+        android:text="@string/consented"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="syncOverWifi,
+syncDescription,syncSwitch,helpAndSupport"
+        android:id="@+id/unusedIdsGroup"
+        android:visibility="gone"/>
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectToPaypalGroup"
+        android:visibility="gone"
+        app:constraint_referenced_ids="paypalOption,connectToPaypalDesc,connectToPaypalBtn"/>
+    <TextView
+        android:id="@+id/paypalOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/regTextSize"
+        android:text="@string/paypal"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"/>
+    <TextView
+        android:id="@+id/connectToPaypalDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/regTextSize"
+        android:text="@string/connectToPaypal"
+        app:layout_constraintTop_toBottomOf="@id/paypalOption"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:text="@string/connect"
+        android:textSize="@dimen/actionTextSize"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/goldColor"
+        android:id="@+id/connectToPaypalBtn"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH5" />
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="amountRecievedText,amountRecievedValue,outstandingText,outStandingAmountValue"
+        android:id="@+id/amountGroup"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        android:text="@string/amountRecieved"
+        android:id="@+id/amountRecievedText"
+        android:layout_marginTop="@dimen/minuteMargin"
+        android:textSize="@dimen/regTextSize"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/darkBlack"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountRecievedValue"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH5"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        android:fontFamily="@font/poppinsextrabold"
+        android:textSize="@dimen/textSize20sp"
+        android:text="@string/amountDummyValue"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/darkBlack"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/amountRecievedText"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV5"
+        android:text="@string/outstandingAmount"
+        android:id="@+id/outstandingText"
+        android:layout_marginTop="25dp"
+        android:textSize="@dimen/regTextSize"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/darkBlack"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smallMargin"
+        app:layout_constraintTop_toBottomOf="@id/amountRecievedValue"
+        app:layout_constraintStart_toStartOf="@id/guideLineV5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineV2"
+        android:fontFamily="@font/poppinsextrabold"
+        android:textSize="@dimen/textSize20sp"
+        android:text="@string/outstandingAmountDummyValue"
+        android:textAlignment="viewEnd"
+        android:id="@+id/outStandingAmountValue"
+        android:textColor="@color/darkBlack"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/xextraLargeMargin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLineV1"
+        app:layout_constraintGuide_begin="25dp"
+        android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLineV2"
+        app:layout_constraintGuide_end="25dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13"
+        android:id="@+id/guideLineH1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"
+        android:id="@+id/guideLineH2"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideLineH3"
+        app:layout_constraintGuide_percent="0.38"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideLineH4"
+        app:layout_constraintGuide_percent="0.50"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/xextraLargeMargin"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="@dimen/titleTextSize"
+        android:textColor="@color/darkBlack"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextInputTypeOverride"
+        android:id="@+id/editText1Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:maxHeight="40dp"
+        android:layout_marginRight="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginLeft="@dimen/largeMargin"
+        android:fontFamily="@font/poppinsmedium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText1"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="@dimen/regTextSize"
+            android:paddingStart="@dimen/smallMargin"
+            android:paddingLeft="@dimen/smallMargin" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextInputTypeOverride"
+        android:id="@+id/editText2Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText1Layout"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:maxHeight="40dp"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:layout_marginLeft="@dimen/largeMargin"
+        android:layout_marginRight="@dimen/largeMargin"
+        android:fontFamily="@font/poppinsmedium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:textSize="@dimen/regTextSize"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingStart="@dimen/smallMargin"
+            android:paddingLeft="@dimen/smallMargin" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextInputTypeOverride"
+        android:id="@+id/editText3Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText2Layout"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:layout_marginLeft="@dimen/largeMargin"
+        android:layout_marginRight="@dimen/largeMargin"
+        android:maxHeight="40dp"
+        android:fontFamily="@font/poppinsmedium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:textSize="@dimen/regTextSize"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingStart="@dimen/smallMargin"
+            android:paddingLeft="@dimen/smallMargin"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText3Layout"
+        android:layout_marginTop="@dimen/xextraLargeMargin"
+        android:layout_marginEnd="@dimen/xextraLargeMargin"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginLeft="@dimen/largeMargin"
+        android:layout_marginRight="@dimen/xextraLargeMargin"
+        android:layout_marginBottom="@dimen/xextraLargeMargin"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:id="@+id/actionLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:text="@string/cancel"
+            android:textColor="@color/darkBlack"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/regTextSize"
+            app:layout_constraintEnd_toStartOf="@id/saveBtn"
+            app:layout_constraintTop_toBottomOf="@id/editText3Layout"
+            android:layout_marginBottom="@dimen/largeMargin"
+            android:layout_marginEnd="@dimen/largeMargin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText3Layout"
+            android:layout_marginBottom="@dimen/xextraLargeMargin"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginLeft="@dimen/mediumMargin"
+            android:textColor="@color/darkBlack"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/regTextSize"
+            android:id="@+id/saveBtn" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userDetailsGroup"
+        app:constraint_referenced_ids="editText1Layout,editText2Layout,editText3Layout,actionLayout"/>
+
+  <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verificationDetaildGroup"
+        android:visibility="gone"
+        app:constraint_referenced_ids="verificationText,instructionText,okLayout"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verificationText"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/borderMargin"
+        android:layout_marginEnd="@dimen/borderMargin"
+        android:layout_marginTop="@dimen/borderMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/regTextSize"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkBlack"
+        android:id="@+id/verificationText"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/instructionText"
+        app:layout_constraintTop_toBottomOf="@id/verificationText"
+        android:text="@string/instructionText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/borderMargin"
+        android:layout_marginEnd="@dimen/borderMargin"
+        android:layout_marginLeft="@dimen/borderMargin"
+        android:layout_marginRight="@dimen/borderMargin"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="@dimen/regTextSize"
+        android:textColor="@color/termsText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/okLayout"
+        app:layout_constraintTop_toBottomOf="@id/instructionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/extraLargeMargin"
+        android:layout_marginTop="@dimen/xextraLargeMargin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:id="@+id/okBtn"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="@dimen/borderMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/regTextSize"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppinsmedium"
+       />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

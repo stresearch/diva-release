@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bounding_box_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bounding_box_border"/>
+
+    <TextView
+        android:id="@+id/activity_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gold_color"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:paddingStart="@dimen/microMargin"
+        android:paddingEnd="@dimen/microMargin"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

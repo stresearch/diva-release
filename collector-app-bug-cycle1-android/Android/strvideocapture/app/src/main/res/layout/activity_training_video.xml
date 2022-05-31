@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".capturemodule.views.TrainingVideoActivity">
+
+
+  <androidx.constraintlayout.widget.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_begin="20dp"
+    android:orientation="vertical"
+    android:id="@+id/guideLineV1"/>
+  <androidx.constraintlayout.widget.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent="0.10"
+    android:orientation="horizontal"
+    android:id="@+id/guideLineH1"/>
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+      <com.visym.collector.utils.VideoView
+        android:id="@+id/videoPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleY="2"/>
+
+
+
+  </FrameLayout>
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imageFrame">
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <TextView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:id="@+id/activityInfoLabel"
+      android:textSize="@dimen/smallTextSize"
+      android:textAlignment="center"
+      android:fontFamily="@font/poppinsregular"
+      android:textColor="@color/textLightColor"
+      android:background="@color/goldColor"/>
+    <ImageView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:id="@+id/imgView"
+      android:background="@drawable/custom_gold_border"
+      />
+    </LinearLayout>
+
+  </FrameLayout>
+  <FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/goBackBtn"
+    app:layout_constraintStart_toStartOf="@id/guideLineV1"
+    app:layout_constraintBottom_toTopOf="@id/guideLineH1">
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ellips"/>
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/back_white"
+    android:layout_gravity="center"/>
+  </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

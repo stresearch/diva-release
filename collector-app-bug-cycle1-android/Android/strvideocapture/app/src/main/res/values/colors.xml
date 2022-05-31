@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#161925</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#887440</color>
+    <color name="darkTextColor">#040404</color>
+    <color name="darkBlack">#161925</color>
+    <color name="textLightColor">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="goldColor">#887440</color>
+    <color name="borderTextInputColor">#b7b7b7</color>
+    <color name="hintTextColor">#b7b7b7</color>
+    <color name="termsText">#565e7c</color>
+    <color name="timerColor">#b4b4b4</color>'
+    <color name="statusColor">#99161925</color>
+    <color name="seekbarTintColor">#66000000</color>
+    <color name="colorRed">#ec000b</color>
+    <color name="timerBackgroundColor">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="mediaControllerReviewColor">#0a0a09</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFE8E8E8</color>
+    <color name="black_transparent_color">#99000000</color>
+    <color name="widget_labelled_spinner_default">#6D6D6D</color>
+    <color name="gold_color">#ffc400</color>
+    <color name="disabled_grey_color">#dddddd</color>
+
+    <!-- The color of the divider and error text when enabled. -->
+    <color name="widget_labelled_spinner_error">#FFDD2C00</color>
+    <color name="activityColor">#919191</color>
+    <color name="noActivityColor">#1b1b1b</color>
+    <color name="editActivityColor">#ffffff</color>
+
+
+</resources>

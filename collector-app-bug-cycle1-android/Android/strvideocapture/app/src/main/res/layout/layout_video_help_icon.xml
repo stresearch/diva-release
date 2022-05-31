@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/largeMargin">
+
+    <TextView
+        android:id="@+id/descriptionTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/semiSmallMargin"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@android:color/black"
+        tools:text="Sample collection description shows the most important" />
+
+</ScrollView>

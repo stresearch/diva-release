@@ -1,0 +1,832 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateStrCollections {
+  onCreateStrCollections {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+subscription OnUpdateStrCollections {
+  onUpdateStrCollections {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+subscription OnDeleteStrCollections {
+  onDeleteStrCollections {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+subscription OnCreateStrProjects {
+  onCreateStrProjects {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+subscription OnUpdateStrProjects {
+  onUpdateStrProjects {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+subscription OnDeleteStrProjects {
+  onDeleteStrProjects {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+subscription OnCreateStrActivities {
+  onCreateStrActivities {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+subscription OnUpdateStrActivities {
+  onUpdateStrActivities {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+subscription OnDeleteStrActivities {
+  onDeleteStrActivities {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+subscription OnCreateStrProgram {
+  onCreateStrProgram {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+subscription OnUpdateStrProgram {
+  onUpdateStrProgram {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+subscription OnDeleteStrProgram {
+  onDeleteStrProgram {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+subscription OnCreateStrCollector {
+  onCreateStrCollector {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+subscription OnUpdateStrCollector {
+  onUpdateStrCollector {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+subscription OnDeleteStrCollector {
+  onDeleteStrCollector {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+subscription OnCreateStrCollectionsAssignment {
+  onCreateStrCollectionsAssignment {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+subscription OnUpdateStrCollectionsAssignment {
+  onUpdateStrCollectionsAssignment {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+subscription OnDeleteStrCollectionsAssignment {
+  onDeleteStrCollectionsAssignment {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+subscription OnCreateStrVideos {
+  onCreateStrVideos {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+subscription OnUpdateStrVideos {
+  onUpdateStrVideos {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+subscription OnDeleteStrVideos {
+  onDeleteStrVideos {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+subscription OnCreateStrInstances {
+  onCreateStrInstances {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+subscription OnUpdateStrInstances {
+  onUpdateStrInstances {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+subscription OnDeleteStrInstances {
+  onDeleteStrInstances {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+subscription OnCreateStrSubject {
+  onCreateStrSubject {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+subscription OnUpdateStrSubject {
+  onUpdateStrSubject {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+subscription OnDeleteStrSubject {
+  onDeleteStrSubject {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+subscription OnCreateStrRating {
+  onCreateStrRating {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+subscription OnUpdateStrRating {
+  onUpdateStrRating {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+subscription OnDeleteStrRating {
+  onDeleteStrRating {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+subscription OnCreateStrConsentQuestionnaire {
+  onCreateStrConsentQuestionnaire {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+subscription OnUpdateStrConsentQuestionnaire {
+  onUpdateStrConsentQuestionnaire {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+subscription OnDeleteStrConsentQuestionnaire {
+  onDeleteStrConsentQuestionnaire {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+subscription OnCreateStrReviewAssignment {
+  onCreateStrReviewAssignment {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}
+subscription OnUpdateStrReviewAssignment {
+  onUpdateStrReviewAssignment {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}
+subscription OnDeleteStrReviewAssignment {
+  onDeleteStrReviewAssignment {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}

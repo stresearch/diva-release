@@ -1,0 +1,369 @@
+#Small Case Schema #09 June 2020
+#####################################################
+
+type strCollections @model @key(fields: ["id","name"])
+@key(
+name : "ByStrCollectionId"
+fields: ["collection_id","id"]
+queryField : "strCollectionsByCollectionId"
+){
+	id: ID!
+	name : String!
+	project_id : String
+	training_video_url : String
+	training_video_json_url : String
+	training_videos: String
+	training_videos_low: String
+	collection_description: String
+	object_id : String
+	objects_list: String
+	activities :  String
+	activity_short_names : String
+	created_date : String
+	updated_date : String
+	collection_id : String
+	default_object : String
+	active :  Boolean
+}
+
+type strProjects @model @key(fields:
+["id","name"]){
+	id: ID!
+	name: String!
+	activity_count: String
+	created_date : String
+	updated_date : String
+	project_id : String
+}
+
+type strActivities @model @key(fields:
+["id","name"]){
+	id: ID!
+	activity_id: String
+	name: String!
+	collection_id: String
+	project_id : String
+	program_id : String
+	counts: String
+	short_name: String
+	created_date : String
+	updated_date : String
+
+}
+
+
+type strProgram @model @key(fields :
+["id","name"]){
+	id: String!
+	name : String!
+	program_id : String
+	client : String
+	created_date : String
+
+}
+
+type strCollector @model @key(fields :
+["collector_id","collector_email"])
+@key(name: "ByStrCollectorId" 
+	 fields: ["collector_id","query_attribute"] 
+	 queryField: "StrCollectorById")
+@key(name:"ByStrCollectorEmail"
+	 fields:["collector_email","collector_id"]
+	 queryField: "StrCollectorByEmail"){
+collector_id : ID!
+collector_email : String! 
+first_name : String!
+last_name : String!
+password : String
+query_attribute: String!
+is_consented : Boolean
+is_dropbox_integrated: Boolean
+is_paypal_integrated : Boolean
+dropbox_token : String
+paypal_email_id : String
+uploaded_count : String
+verified_count : String
+not_verified_count : String
+consented_count : String
+authorized : String
+outstanding_amount : String
+collector_score : String
+reviewer_score : String
+}
+
+type strCollectionsAssignment @model @key(fields: ["collector_id","collection_id"])
+{
+	collector_id: ID!
+	collector_email: String
+	collection_name : String
+	project_id : String
+	project_name: String
+	program_id : String
+	program_name: String
+	training_video_url : String
+	training_video_json_url : String
+	training_videos: String
+	training_videos_low: String
+	collection_description: String
+	objects_list: String
+	collection_id : String!
+	default_object : String
+	activities : String
+	training_videos_overlay: String
+	activity_short_names : String
+	active :  Boolean
+	isTrainingVideoEnabled: Boolean
+	isConsentRequired : Boolean
+	consent_overlay_text : String
+
+}
+
+type strVideos
+@model 
+@key(fields :["id","uploaded_date"])
+@key(
+name : "video_id-index"
+fields: ["video_id"]
+queryField : "StrVideosByVideoID"
+)
+@key(
+name : "week-uploaded_date-index"
+fields: ["week","uploaded_date"]
+queryField : "StrVideosByWeekUploaded"
+)
+@key(
+name : "ByStrQuerAttribute"
+fields: ["query_attribute","uploaded_date"]
+queryField : "StrVideosByQueryAttribute"
+)
+@key(
+name : "ByStrCollectorId"
+fields: ["collector_id","id"]
+queryField : "StrVideosByCollectorID"
+)
+@key(
+name : "ByStrUploadedDate"
+fields: ["collector_id","query_attribute"]
+queryField : "StrVideoByUploaedDate"
+)
+@key(
+name : "ByStrUploadedDateQ"
+fields: ["collector_id","uploaded_date"]
+queryField : "StrVideoByUploaedDateQ"
+)
+{
+id : ID!
+raw_video_file_path: String!
+annotation_file_path : String
+video_id : String!
+collector_id : String!
+project_id : String
+collection_id: String
+collection_name : String
+activities_list: String
+object_label_list : String
+thumbs_up : Int
+thumbs_down : Int
+created_date : String
+updated_date : String
+collected_date: String
+latitude : String
+longitude : String
+processed_video_file_path : String
+rating : String
+subject_id : String
+verified : Boolean
+video_sharing_link : String
+json_sharing_link : String
+rating_score : String
+status : String
+status_reason : String
+thumbnail : String
+thumbnail_small: String
+duration : String
+display_duration : String
+uploaded_date :  String!
+query_attribute: String!
+video_state : String
+week : String
+}
+
+type strInstances @model @key(fields:
+["id","instance_id"])
+@key(name: "ByStrVideoId" 
+	 fields: ["video_id","activity_name"] 
+	 queryField: "instanceByStrVideoId")
+@key(name: "instance_id-index" 
+	 fields: ["instance_id"] 
+	 queryField: "instanceByIntanceId")
+@key(name: "week-uploaded_date-index" 
+	 fields: ["week","uploaded_date"] 
+	 queryField: "instanceByWeekUploadedDate")
+@key(name: "video_id-index" 
+	 fields: ["video_id"] 
+	 queryField: "instanceByVideoId")
+
+
+{
+id : String!
+instance_id:String!
+activity_name: String!
+avg_bbox_height :String
+avg_bbox_size :String
+avg_bbox_width :String
+bad_alignament_score :String
+bad_box_big_score :String
+bad_box_score :String
+bad_box_small_score :String
+bad_label_score :String
+bad_timing_score :String
+bad_video_score :String
+bad_viewpoint_score :String
+collector_id :String
+collection_id :String
+end_frame :String
+program_id :String
+project_id :String
+rating_score :String
+review_reason :String
+s3_path :String
+start_frame :String
+subject_id :String
+created_date :String
+updated_date :String
+uploaded_date: String
+verified :Boolean
+video_id :String!
+week :String
+need_review_score : String
+}
+
+
+
+type strSubject @model @key(fields:
+["collector_email","subject_email"])
+@key(name: "ByStrSubjectEmail"
+fields: ["subject_email","status"]
+queryField: "subjectByStrSubjectEmail"){
+	collector_id: ID!
+	uuid : String
+	subject_email: String!
+	collector_email: String!
+	last_activity_date: String
+	consent_response :  String
+	consent_video_id : String
+	beard: String
+	ethnicity: String
+	eye_glasses : String
+	first_name : String
+	last_name : String
+	gender : String
+	hair_color: String
+	hair_length : String
+	uploaded_count: String
+	verified_count : String
+	created_date : String
+	updated_date : String
+	status : String!
+	count: String
+	program_id : String
+	program_name : String
+	project_id : String
+	project_name : String
+}
+
+
+
+type strRating @model @key(fields:
+["id","reviewer_id"])
+@key(name: "ByStrCollectorId" 
+	 fields: ["reviewer_id","video_id"] 
+	 queryField: "ratingByStrCollectorId")
+@key(name: "week-index" 
+	 fields: ["week"] 
+	 queryField: "ratingByWeek")
+@key(name: "reviewer_id-week-index" 
+	 fields: ["reviewer_id","week"] 
+	 queryField: "ratingByReviewerIDWeek")
+ @key(name: "video_id-index" 
+	 fields: ["video_id"] 
+	 queryField: "ratingByVideoID")
+{
+id : String!
+reviewer_id :String!
+up : Int
+video_id :String
+week  : String
+bad_alignment :String
+bad_box_big :String
+bad_box_small :String
+bad_label :String
+bad_timing :String
+bad_video :String
+bad_viewpoint :String
+awkward_scene :String
+bad_visibility :String
+project_id: String
+program_id: String
+project_name: String
+program_name: String
+collection_name: String
+collection_id: String
+rating_responses : String
+bad_diversity :String
+submitted_time: String
+video_uploaded_date: String
+}
+
+
+
+
+type strConsentQuestionnaire @model @key(fields :["project_id","id"]){
+	id : ID!
+	consent_id : String
+	short_description :String
+	long_description : String
+	agree_question_id : String
+	disagree_question_id : String
+	category : String
+	category_response: String
+	created_date : String
+	updated_date : String
+	program_id: String
+	project_id: String!
+	collection_id: String
+	collection_name : String
+	more_info : String
+	consent_question_type: String
+
+}
+
+type strReviewAssignment @model @key(fields:["collector_id","video_id"])
+@key(name: "ByStrRatingVideoAssignedDate"
+	 fields: ["collector_id","assigned_date"]
+	 queryField: "strRatingVideoSortByAssignedDate")
+@key(name: "ByVideoId"
+	 fields: ["video_id"]
+	 queryField: "assignmentByVideoId")
+	{
+	collector_id: ID!
+	video_id : String!
+	collection_id : String
+	collection_name : String
+	program_name: String
+	program_id : String
+	project_id:String
+	project_name : String
+	duration : String
+	review_status: String
+	uploaded_date : String
+	week : String
+	instance_ids: String
+	video_file_path : String
+	annotation_file_path : String
+	rating_score : String
+	thumbnail : String
+	thumbnail_small : String
+	assigned_date : String!
+	orientation : String
+}

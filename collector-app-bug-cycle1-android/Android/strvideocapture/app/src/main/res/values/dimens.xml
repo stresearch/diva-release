@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="mediumMargin">12dp</dimen>
+<dimen name="mmediumMargin">14dp</dimen>
+<dimen name="largeMargin">16dp</dimen>
+<dimen name="extraLargeMargin">20dp</dimen>
+<dimen name="exextraLargeMargin">28dp</dimen>
+<dimen name="xextraLargeMargin">40dp</dimen>
+<dimen name="xxExtraLargeMargin">50dp</dimen>
+<dimen name="customMargin">75dp</dimen>
+    <dimen name="extraLargeTextSize">26sp</dimen>
+    <dimen name="appTitleTextsize">36sp</dimen>
+    <dimen name="borderMargin">25dp</dimen>
+    <dimen name="regTextSize">13sp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="inputBoxCornerRadius">2dp</dimen>
+    <dimen name="smallTextSize">10sp</dimen>
+    <dimen name="extraSmallMargin">8dp</dimen>
+    <dimen name="smallMargin">10dp</dimen>
+    <dimen name="mediumMargin2">20dp</dimen>
+    <dimen name="semiSmallMargin">8dp</dimen>
+    <dimen name="minuteMargin">6dp</dimen>
+    <dimen name="microMargin">4dp</dimen>
+    <dimen name="accountTextSize">11.3sp</dimen>
+    <dimen name="statsUploadSize">67sp</dimen>
+    <dimen name="actionTextSize">11sp</dimen>
+    <dimen name="textSize20sp">20sp</dimen>
+    <dimen name="textSize18Sp">18sp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="text_input_layout_box_corner_radius_2_dp">2dp</dimen>
+    <dimen name="text_input_layout_box_corner_radius_4_dp">4dp</dimen>
+</resources>

@@ -1,0 +1,383 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-visymcollector-visymcdev-213217-authRole",
+      "UnauthRoleArn": "arn:aws:iam::894247761989:role/amplify-visymcollector-visymcdev-213217-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::894247761989:role/amplify-visymcollector-visymcdev-213217-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-visymcollector-visymcdev-213217-deployment",
+      "UnauthRoleName": "amplify-visymcollector-visymcdev-213217-unauthRole",
+      "StackName": "amplify-visymcollector-visymcdev-213217",
+      "StackId": "arn:aws:cloudformation:us-east-1:894247761989:stack/amplify-visymcollector-visymcdev-213217/173dc2b0-4010-11eb-8fd6-1212f512cf43",
+      "AmplifyAppId": "d17a5tkts215kp"
+    }
+  },
+  "function": {
+    "visymPycollectorLayer": {
+      "layerVersionMap": {
+        "1": {
+          "permissions": [
+            {
+              "type": "private"
+            }
+          ],
+          "hash": "/NKz42BlCGm1d93SIvuwN3KO+XZ7vs8ACP3L7eLiuoo="
+        },
+        "2": {
+          "permissions": [
+            {
+              "type": "private"
+            }
+          ],
+          "hash": "sNpqqMWbO9z5S926TkQ8KxkUH1ALIq6qmmFFpm8/k4g="
+        },
+        "3": {
+          "permissions": [
+            {
+              "type": "private"
+            }
+          ],
+          "hash": "GRfEKOEFnJnQhSFjz0+00G1+K33hwCDIYRBrg+UDYI0="
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true,
+      "lastPackageTimeStamp": "2020-12-19T16:04:53.666Z",
+      "distZipFilename": "visymPycollectorLayer-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-visymcollector-visymcdev-213217-deployment",
+        "s3Key": "amplify-builds/visymPycollectorLayer-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/visymPycollectorLayer-awscloudformation-template.json",
+        "logicalId": "functionvisymPycollectorLayer"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.317Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:layer:visymPycollectorLayer-visymcdev:16"
+      },
+      "lastPushDirHash": "cQQfbiddmM88D3UQWWizegHdjL0="
+    },
+    "collectorVideosProcessor": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymPycollectorLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:collectorVideosProcessor-visymcdev",
+        "Name": "collectorVideosProcessor-visymcdev",
+        "LambdaExecutionRole": "visym_collector_admin"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.320Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/collectorVideosProcessor-cloudformation-template.json",
+        "logicalId": "functioncollectorVideosProcessor"
+      },
+      "lastBuildTimeStamp": "2020-12-19T18:08:46.088Z",
+      "lastPackageTimeStamp": "2020-12-19T18:08:49.606Z",
+      "distZipFilename": "collectorVideosProcessor-3751503353337a2b7575-build.zip",
+      "lastPushDirHash": "YtqlfrG0qKGzFDfYRpwqvyWrV5Q="
+    },
+    "collectorEmailConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymPycollectorLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:collectorEmailConfirmation-visymcdev",
+        "Name": "collectorEmailConfirmation-visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.326Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/collectorEmailConfirmation-cloudformation-template.json",
+        "logicalId": "functioncollectorEmailConfirmation"
+      }
+    },
+    "collectorPostAuthentication": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymPycollectorLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:collectorPostAuthentication-visymcdev",
+        "Name": "collectorPostAuthentication-visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.330Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/collectorPostAuthentication-cloudformation-template.json",
+        "logicalId": "functioncollectorPostAuthentication"
+      },
+      "lastBuildTimeStamp": "2020-12-19T16:11:20.457Z",
+      "lastPackageTimeStamp": "2020-12-19T16:11:22.189Z",
+      "distZipFilename": "collectorPostAuthentication-6c4a74434d4e4c444b6c-build.zip",
+      "lastPushDirHash": "Q8s82cuVboKI5J2C8BjPUVpLpWE="
+    },
+    "visymCollectorPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:visymCollectorPostConfirmation-visymcdev",
+        "Name": "visymCollectorPostConfirmation-visymcdev",
+        "LambdaExecutionRole": "visymCollectorPostConfirmation-visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.335Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/visymCollectorPostConfirmation-cloudformation-template.json",
+        "logicalId": "functionvisymCollectorPostConfirmation"
+      }
+    },
+    "AdminQueries63c42989": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "visymCollector",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:AdminQueries63c42989-visymcdev",
+        "Name": "AdminQueries63c42989-visymcdev",
+        "LambdaExecutionRole": "AdminQueries63c42989LambdaRole-visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.339Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/AdminQueries63c42989-cloudformation-template.json",
+        "logicalId": "functionAdminQueries63c42989"
+      }
+    },
+    "collectorRatingScorer": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymPycollectorLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:collectorRatingScorer-visymcdev",
+        "Name": "collectorRatingScorer-visymcdev",
+        "LambdaExecutionRole": "visym_collector_admin"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.378Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/collectorRatingScorer-cloudformation-template.json",
+        "logicalId": "functioncollectorRatingScorer"
+      },
+      "lastBuildTimeStamp": "2020-12-19T21:53:43.841Z",
+      "lastPackageTimeStamp": "2020-12-19T21:53:45.100Z",
+      "distZipFilename": "collectorRatingScorer-444e7646383974306274-build.zip",
+      "lastPushDirHash": "79vCuXIGoIlKdSXXyfFvxThD/QA="
+    },
+    "collectorEditedVideosHandeler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymPycollectorLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:894247761989:function:collectorEditedVideosHandeler-visymcdev",
+        "Name": "collectorEditedVideosHandeler-visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.347Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/function/collectorEditedVideosHandeler-cloudformation-template.json",
+        "logicalId": "functioncollectorEditedVideosHandeler"
+      },
+      "lastBuildTimeStamp": "2020-12-19T18:33:26.099Z",
+      "lastPackageTimeStamp": "2020-12-19T18:33:27.404Z",
+      "distZipFilename": "collectorEditedVideosHandeler-3064526d7a436b53344c-build.zip",
+      "lastPushDirHash": "xhjkibweBxwEMzMiKi1cV9ZOOOI="
+    }
+  },
+  "auth": {
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "visymCollector",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "collectorPythonAPIGroupRole": "arn:aws:iam::894247761989:role/us-east-1_exm3TMls8-collectorPythonAPIGroupRole"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.352Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      }
+    },
+    "visymCollector": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "visymCollectorPostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
+      "customAuth": false,
+      "output": {
+          "AppClientSecret": "",
+        "UserPoolId": "us-east-1_exm3TMls8",
+          "AppClientIDWeb": "",
+          "AppClientID": "",
+        "IdentityPoolId": "us-east-1:36dbe962-fe21-48e4-babd-b07a595b0b01",
+        "IdentityPoolName": "visymCollector__visymcdev",
+        "UserPoolName": "visymCollector"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.356Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/auth/visymCollector-cloudformation-template.yml",
+        "logicalId": "authvisymCollector"
+      }
+    }
+  },
+  "api": {
+    "AdminQueries": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "visymCollector",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "AdminQueries63c42989",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "AdminQueries",
+        "RootUrl": "https://eggvmuyqog.execute-api.us-east-1.amazonaws.com/visymcdev"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.360Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/api/admin-queries-cloudformation-template.json",
+        "logicalId": "apiAdminQueries"
+      }
+    },
+    "visymApi": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authvisymCollector"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "lbo6pxx3pne3ngmt3ow2h3w7ei",
+        "GraphQLAPIEndpointOutput": "https://yqynunvkt5b6dczzyslgijukuy.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.364Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apivisymApi"
+      }
+    }
+  },
+  "storage": {
+    "visymS3Storage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "collectorVideosProcessor",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "output": {
+        "BucketName": "visym-data-lake213217-visymcdev",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2020-12-19T21:54:54.368Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-visymcollector-visymcdev-213217-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storagevisymS3Storage"
+      }
+    }
+  }
+}

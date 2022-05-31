@@ -1,0 +1,165 @@
+{
+    "metadata": {
+      "project_id": 100,
+      "collection_id": 2,
+      "collector_id": 926,
+      "subject_ids": [37,38],
+      "video_id": 15,
+      "collected_date": "2020-01-26T13:51:29Z",
+      "blurred_faces": 5,
+      "frame_rate": 29.96,
+      "frame_width": 1024,
+      "frame_height": 768,
+      "duration": 20,
+      "orientation": "landscape"
+      "consentVideoJsonUrl": ""
+    },
+    "activity" :     [
+                {
+            "end_frame" : 6,
+            "label" : "Opening",
+            "start_frame" : 1,
+            "object_index": [0]
+        },
+                {
+            "end_frame" : 14,
+            "label" : "Closing",
+            "start_frame" : 9,
+            "object_index": [0]
+        }
+    ],
+    "object" : [
+        {
+            "label": "person",
+            "bounding_box": [
+                        {
+                    "frame" :             {
+                        "height" : 501.5763546783,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 859.2118226591
+                    },
+                    "frame_index" : 0
+                },
+                        {
+                    "frame" :             {
+                        "height" : 369.1625615751,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 925.4187192107
+                    },
+                    "frame_index" : 1
+                },
+                        {
+                    "frame" :             {
+                        "height" : 386.5024871062,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 916.7487564451
+                    },
+                    "frame_index" : 2
+                },
+                        {
+                    "frame" :             {
+                        "height" : 557.8325604196,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 981.0837197884
+                    },
+                    "frame_index" : 3
+                },
+                        {
+                    "frame" :             {
+                        "height" : 986.1084224872,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 916.9457887546
+                    },
+                    "frame_index" : 4
+                },
+                        {
+                    "frame" :             {
+                        "height" : 986.1084224872,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 916.9457887546
+                    },
+                    "frame_index" : 5
+                },
+                        {
+                    "frame" :             {
+                        "height" : 919.9999999964,
+                        "width" : 1080,
+                        "x" : 0,
+                        "y" : 1000
+                    },
+                    "frame_index" : 6
+                },
+                        {
+                    "frame" :             {
+                        "height" : 919.9999999964,
+                        "width" : 671.04,
+                        "x" : 204.48,
+                        "y" : 1000
+                    },
+                    "frame_index" : 7
+                },
+                        {
+                    "frame" :             {
+                        "height" : 919.9999999964,
+                        "width" : 262.08,
+                        "x" : 408.96,
+                        "y" : 1000
+                    },
+                    "frame_index" : 8
+                },
+                        {
+                    "frame" :             {
+                        "height" : 637.9522735597,
+                        "width" : 87.0804853411,
+                        "x" : 496.4597573295,
+                        "y" : 641.0238632184
+                    },
+                    "frame_index" : 10
+                },
+                        {
+                    "frame" :             {
+                        "height" : 1057.8326844164,
+                        "width" : 468.1287454387,
+                        "x" : 305.9356272807,
+                        "y" : 681.08365779
+                    },
+                    "frame_index" : 11
+                },
+                        {
+                    "frame" :             {
+                        "height" : 1057.8326844164,
+                        "width" : 876.2808849859,
+                        "x" : 101.8595575071,
+                        "y" : 681.08365779
+                    },
+                    "frame_index" : 12
+                },
+                        {
+                    "frame" :             {
+                        "height" : 752.0571579941,
+                        "width" : 876.2808849859,
+                        "x" : 101.8595575071,
+                        "y" : 583.9714210011
+                    },
+                    "frame_index" : 13
+                },
+                        {
+                    "frame" :             {
+                        "height" : 448.2201316778,
+                        "width" : 876.2808849859,
+                        "x" : 101.8595575071,
+                        "y" : 885.8899341593
+                    },
+                    "frame_index" : 14
+                }
+            ]
+        }
+    ]
+}
+

@@ -1,0 +1,15 @@
+Podfile.lock
+Pods
+.graphqlconfig.yml
+amplify/backend/function/visymPycollectorLayer
+amplify/\#current-cloud-backend
+amplify/.config/local-*
+amplify/logs
+amplify/mock-data
+amplify/backend/.temp
+build/
+dist/
+node_modules/
+aws-exports.js
+amplifytools.xcconfig
+.secret-*

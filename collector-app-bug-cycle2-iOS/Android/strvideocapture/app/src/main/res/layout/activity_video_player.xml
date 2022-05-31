@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".capturemodule.views.VideoPlayerActivity">
+
+    <VideoView
+        android:id="@+id/video_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:id="@+id/go_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back_white"
+        android:layout_margin="@dimen/extraLargeMargin"
+        android:background="@drawable/circle_background_transparent"
+        android:padding="@dimen/smallTextSize"/>
+    <ImageButton
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/close"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/extraLargeMargin"
+        android:background="@drawable/circle_background_transparent"
+        android:padding="@dimen/smallTextSize"/>
+
+    <ProgressBar
+        android:id="@+id/loading_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MySeekBar"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/pause_play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_background_transparent"
+        app:srcCompat="@drawable/ic_play_icon"
+        android:padding="@dimen/largeMargin"
+        android:visibility="gone"/>
+
+
+    <include
+        layout="@layout/bounding_box_layout"/>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentBottom="true"
+        layout="@layout/review_training_video_media_controller"
+        android:layout_above="@id/questionnaire" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionnaire"
+        android:orientation="horizontal"
+        android:background="@color/black_transparent_color"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Hello ew One"/>
+
+    </LinearLayout>
+</RelativeLayout>

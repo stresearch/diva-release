@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499930736628",
+    "firebase_url": "https://collector-1581961981383.firebaseio.com",
+    "project_id": "collector-1581961981383",
+    "storage_bucket": "collector-1581961981383.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499930736628:android:758f51f40825aa1e203ba1",
+        "android_client_info": {
+          "package_name": "com.visym.collector"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+		"client_id": "",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordView" customModule="Collector" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonView" destination="ofy-gZ-Rwx" id="3yP-pq-odr"/>
+                <outlet property="recordButton" destination="0iD-qS-SOu" id="OTL-D0-mHS"/>
+                <outlet property="timeLbl" destination="FdC-ay-2PJ" id="7UP-u9-six"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-ay-2PJ">
+                    <rect key="frame" x="20" y="10" width="60" height="18"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.20012842465753425" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="ajO-vP-Avd"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="wj9-Ml-03a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofy-gZ-Rwx">
+                    <rect key="frame" x="10" y="40" width="80" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iD-qS-SOu" customClass="CameraButton" customModule="Collector" customModuleProvider="target">
+                            <rect key="frame" x="5" y="5" width="70" height="70"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="5Ag-Ju-2ta"/>
+                                <constraint firstAttribute="height" constant="70" id="QTB-7y-oXX"/>
+                            </constraints>
+                            <state key="normal" title="Stop">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0iD-qS-SOu" firstAttribute="centerX" secondItem="ofy-gZ-Rwx" secondAttribute="centerX" id="0Bp-Ct-W4S"/>
+                        <constraint firstAttribute="height" constant="80" id="dSs-oW-GSA"/>
+                        <constraint firstItem="0iD-qS-SOu" firstAttribute="centerY" secondItem="ofy-gZ-Rwx" secondAttribute="centerY" id="qPK-aZ-oEn"/>
+                        <constraint firstAttribute="width" constant="80" id="rFz-Uh-qxh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FdC-ay-2PJ" secondAttribute="trailing" priority="999" constant="20" id="9Xr-zI-ktr"/>
+                <constraint firstItem="ofy-gZ-Rwx" firstAttribute="top" secondItem="FdC-ay-2PJ" secondAttribute="bottom" constant="12" id="9ZT-ag-Jfv"/>
+                <constraint firstItem="ofy-gZ-Rwx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9rx-ta-bua"/>
+                <constraint firstItem="FdC-ay-2PJ" firstAttribute="centerX" secondItem="ofy-gZ-Rwx" secondAttribute="centerX" id="B11-2k-8ts"/>
+                <constraint firstItem="FdC-ay-2PJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="999" constant="20" id="Krf-QP-dWE"/>
+                <constraint firstAttribute="bottom" secondItem="ofy-gZ-Rwx" secondAttribute="bottom" id="iCU-rf-2af"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
+        </view>
+    </objects>
+</document>

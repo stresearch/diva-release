@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".capturemodule.views.CollectionDetailsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/borderMargin"
+        android:id="@+id/guideLineV1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/borderMargin"
+        android:id="@+id/guidelineV2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        android:id="@+id/guideLineH2"/>
+
+    <ImageView
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="@dimen/mediumMargin"
+        android:paddingRight="@dimen/mediumMargin"
+        android:paddingBottom="@dimen/extraSmallMargin"
+        android:scaleType="center"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toTopOf="@id/guideLineH1"
+        app:layout_constraintStart_toStartOf="@+id/guideLineV1" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideLineH1"
+        android:text="@string/collectionHeading"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone"
+        android:textColor="@color/goldColor"
+        android:fontFamily="@font/poppinssemibold"
+        android:id="@+id/collectionSubHeading"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintBottom_toTopOf="@id/titleText"
+        android:layout_marginBottom="@dimen/minuteMargin"
+        android:layout_marginTop="@dimen/largeMargin"/>
+<TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/collectionSubHeading"
+        android:text="@string/collectionActivityTitle"
+        android:id="@+id/titleText"
+        android:textAllCaps="true"
+        android:textSize="@dimen/appTitleTextsize"
+        android:textColor="@color/darkBlack"
+        android:fontFamily="@font/poppinsextrabold"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/activitiesHeading"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        android:text="@string/activitiesHeading"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone"
+        android:textColor="@color/goldColor"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        android:layout_marginBottom="@dimen/smallMargin"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/nextBtn"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <TextView
+            android:id="@+id/descriptionTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@android:color/black"
+            tools:text="Sample collection description" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+        android:background="@color/darkBlack"
+        android:padding="@dimen/largeMargin"
+        android:text="@string/next"
+        android:textColor="@color/textLightColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/exextraLargeMargin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

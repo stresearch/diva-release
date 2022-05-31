@@ -1,0 +1,1720 @@
+# this is an auto generated file. This will be overwritten
+query GetStrCollections($id: ID!, $name: String!) {
+  getStrCollections(id: $id, name: $name) {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+query ListStrCollectionss(
+  $id: ID
+  $name: ModelStringKeyConditionInput
+  $filter: ModelstrCollectionsFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrCollectionss(
+    id: $id
+    name: $name
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      name
+      project_id
+      training_video_url
+      training_video_json_url
+      training_videos
+      training_videos_low
+      collection_description
+      object_id
+      objects_list
+      activities
+      activity_short_names
+      created_date
+      updated_date
+      collection_id
+      default_object
+      active
+    }
+    nextToken
+  }
+}
+query GetStrProjects($id: ID!, $name: String!) {
+  getStrProjects(id: $id, name: $name) {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+query ListStrProjectss(
+  $id: ID
+  $name: ModelStringKeyConditionInput
+  $filter: ModelstrProjectsFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrProjectss(
+    id: $id
+    name: $name
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      name
+      activity_count
+      created_date
+      updated_date
+      project_id
+    }
+    nextToken
+  }
+}
+query GetStrActivities($id: ID!, $name: String!) {
+  getStrActivities(id: $id, name: $name) {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+query ListStrActivitiess(
+  $id: ID
+  $name: ModelStringKeyConditionInput
+  $filter: ModelstrActivitiesFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrActivitiess(
+    id: $id
+    name: $name
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      activity_id
+      name
+      collection_id
+      project_id
+      program_id
+      counts
+      short_name
+      created_date
+      updated_date
+    }
+    nextToken
+  }
+}
+query GetStrProgram($id: String!, $name: String!) {
+  getStrProgram(id: $id, name: $name) {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+query ListStrPrograms(
+  $id: String
+  $name: ModelStringKeyConditionInput
+  $filter: ModelstrProgramFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrPrograms(
+    id: $id
+    name: $name
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      name
+      program_id
+      client
+      created_date
+    }
+    nextToken
+  }
+}
+query GetStrCollector($collector_id: ID!, $collector_email: String!) {
+  getStrCollector(
+    collector_id: $collector_id
+    collector_email: $collector_email
+  ) {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+query ListStrCollectors(
+  $collector_id: ID
+  $collector_email: ModelStringKeyConditionInput
+  $filter: ModelstrCollectorFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrCollectors(
+    collector_id: $collector_id
+    collector_email: $collector_email
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      collector_id
+      collector_email
+      first_name
+      last_name
+      password
+      query_attribute
+      is_consented
+      is_dropbox_integrated
+      is_paypal_integrated
+      dropbox_token
+      paypal_email_id
+      uploaded_count
+      verified_count
+      not_verified_count
+      consented_count
+      authorized
+      outstanding_amount
+      collector_score
+      reviewer_score
+    }
+    nextToken
+  }
+}
+query GetStrCollectionsAssignment($collector_id: ID!, $collection_id: String!) {
+  getStrCollectionsAssignment(
+    collector_id: $collector_id
+    collection_id: $collection_id
+  ) {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+query ListStrCollectionsAssignments(
+  $collector_id: ID
+  $collection_id: ModelStringKeyConditionInput
+  $filter: ModelstrCollectionsAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrCollectionsAssignments(
+    collector_id: $collector_id
+    collection_id: $collection_id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      collector_id
+      collector_email
+      collection_name
+      project_id
+      project_name
+      program_id
+      program_name
+      training_video_url
+      training_video_json_url
+      training_videos
+      training_videos_low
+      collection_description
+      objects_list
+      collection_id
+      default_object
+      activities
+      training_videos_overlay
+      activity_short_names
+      active
+      isTrainingVideoEnabled
+      isConsentRequired
+      consent_overlay_text
+    }
+    nextToken
+  }
+}
+query GetStrVideos($id: ID!, $uploaded_date: String!) {
+  getStrVideos(id: $id, uploaded_date: $uploaded_date) {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+query ListStrVideoss(
+  $id: ID
+  $uploaded_date: ModelStringKeyConditionInput
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrVideoss(
+    id: $id
+    uploaded_date: $uploaded_date
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query GetStrInstances($id: String!, $instance_id: String!) {
+  getStrInstances(id: $id, instance_id: $instance_id) {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+query ListStrInstancess(
+  $id: String
+  $instance_id: ModelStringKeyConditionInput
+  $filter: ModelstrInstancesFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrInstancess(
+    id: $id
+    instance_id: $instance_id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      instance_id
+      activity_name
+      avg_bbox_height
+      avg_bbox_size
+      avg_bbox_width
+      bad_alignament_score
+      bad_box_big_score
+      bad_box_score
+      bad_box_small_score
+      bad_label_score
+      bad_timing_score
+      bad_video_score
+      bad_viewpoint_score
+      collector_id
+      collection_id
+      end_frame
+      program_id
+      project_id
+      rating_score
+      review_reason
+      s3_path
+      start_frame
+      subject_id
+      created_date
+      updated_date
+      uploaded_date
+      verified
+      video_id
+      week
+      need_review_score
+    }
+    nextToken
+  }
+}
+query GetStrSubject($collector_email: String!, $subject_email: String!) {
+  getStrSubject(
+    collector_email: $collector_email
+    subject_email: $subject_email
+  ) {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+query ListStrSubjects(
+  $collector_email: String
+  $subject_email: ModelStringKeyConditionInput
+  $filter: ModelstrSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrSubjects(
+    collector_email: $collector_email
+    subject_email: $subject_email
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      collector_id
+      uuid
+      subject_email
+      collector_email
+      last_activity_date
+      consent_response
+      consent_video_id
+      beard
+      ethnicity
+      eye_glasses
+      first_name
+      last_name
+      gender
+      hair_color
+      hair_length
+      uploaded_count
+      verified_count
+      created_date
+      updated_date
+      status
+      count
+      program_id
+      program_name
+      project_id
+      project_name
+    }
+    nextToken
+  }
+}
+query GetStrRating($id: String!, $reviewer_id: String!) {
+  getStrRating(id: $id, reviewer_id: $reviewer_id) {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+query ListStrRatings(
+  $id: String
+  $reviewer_id: ModelStringKeyConditionInput
+  $filter: ModelstrRatingFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrRatings(
+    id: $id
+    reviewer_id: $reviewer_id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      reviewer_id
+      up
+      video_id
+      week
+      bad_alignment
+      bad_box_big
+      bad_box_small
+      bad_label
+      bad_timing
+      bad_video
+      bad_viewpoint
+      awkward_scene
+      bad_visibility
+      project_id
+      program_id
+      project_name
+      program_name
+      collection_name
+      collection_id
+      rating_responses
+      bad_diversity
+      submitted_time
+      video_uploaded_date
+    }
+    nextToken
+  }
+}
+query GetStrConsentQuestionnaire($project_id: String!, $id: ID!) {
+  getStrConsentQuestionnaire(project_id: $project_id, id: $id) {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+query ListStrConsentQuestionnaires(
+  $project_id: String
+  $id: ModelIDKeyConditionInput
+  $filter: ModelstrConsentQuestionnaireFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrConsentQuestionnaires(
+    project_id: $project_id
+    id: $id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      consent_id
+      short_description
+      long_description
+      agree_question_id
+      disagree_question_id
+      category
+      category_response
+      created_date
+      updated_date
+      program_id
+      project_id
+      collection_id
+      collection_name
+      more_info
+      consent_question_type
+    }
+    nextToken
+  }
+}
+query GetStrReviewAssignment($collector_id: ID!, $video_id: String!) {
+  getStrReviewAssignment(collector_id: $collector_id, video_id: $video_id) {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}
+query ListStrReviewAssignments(
+  $collector_id: ID
+  $video_id: ModelStringKeyConditionInput
+  $filter: ModelstrReviewAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listStrReviewAssignments(
+    collector_id: $collector_id
+    video_id: $video_id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      collector_id
+      video_id
+      collection_id
+      collection_name
+      program_name
+      program_id
+      project_id
+      project_name
+      duration
+      review_status
+      uploaded_date
+      week
+      instance_ids
+      video_file_path
+      annotation_file_path
+      rating_score
+      thumbnail
+      thumbnail_small
+      assigned_date
+      orientation
+    }
+    nextToken
+  }
+}
+query StrCollectionsByCollectionId(
+  $collection_id: String
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrCollectionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  strCollectionsByCollectionId(
+    collection_id: $collection_id
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      project_id
+      training_video_url
+      training_video_json_url
+      training_videos
+      training_videos_low
+      collection_description
+      object_id
+      objects_list
+      activities
+      activity_short_names
+      created_date
+      updated_date
+      collection_id
+      default_object
+      active
+    }
+    nextToken
+  }
+}
+query StrCollectorById(
+  $collector_id: ID
+  $query_attribute: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrCollectorFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrCollectorById(
+    collector_id: $collector_id
+    query_attribute: $query_attribute
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      collector_id
+      collector_email
+      first_name
+      last_name
+      password
+      query_attribute
+      is_consented
+      is_dropbox_integrated
+      is_paypal_integrated
+      dropbox_token
+      paypal_email_id
+      uploaded_count
+      verified_count
+      not_verified_count
+      consented_count
+      authorized
+      outstanding_amount
+      collector_score
+      reviewer_score
+    }
+    nextToken
+  }
+}
+query StrCollectorByEmail(
+  $collector_email: String
+  $collector_id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrCollectorFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrCollectorByEmail(
+    collector_email: $collector_email
+    collector_id: $collector_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      collector_id
+      collector_email
+      first_name
+      last_name
+      password
+      query_attribute
+      is_consented
+      is_dropbox_integrated
+      is_paypal_integrated
+      dropbox_token
+      paypal_email_id
+      uploaded_count
+      verified_count
+      not_verified_count
+      consented_count
+      authorized
+      outstanding_amount
+      collector_score
+      reviewer_score
+    }
+    nextToken
+  }
+}
+query StrVideosByVideoId(
+  $video_id: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideosByVideoID(
+    video_id: $video_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query StrVideosByWeekUploaded(
+  $week: String
+  $uploaded_date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideosByWeekUploaded(
+    week: $week
+    uploaded_date: $uploaded_date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query StrVideosByQueryAttribute(
+  $query_attribute: String
+  $uploaded_date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideosByQueryAttribute(
+    query_attribute: $query_attribute
+    uploaded_date: $uploaded_date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query StrVideosByCollectorId(
+  $collector_id: String
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideosByCollectorID(
+    collector_id: $collector_id
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query StrVideoByUploaedDate(
+  $collector_id: String
+  $query_attribute: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideoByUploaedDate(
+    collector_id: $collector_id
+    query_attribute: $query_attribute
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query StrVideoByUploaedDateQ(
+  $collector_id: String
+  $uploaded_date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrVideosFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  StrVideoByUploaedDateQ(
+    collector_id: $collector_id
+    uploaded_date: $uploaded_date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      raw_video_file_path
+      annotation_file_path
+      video_id
+      collector_id
+      project_id
+      collection_id
+      collection_name
+      activities_list
+      object_label_list
+      thumbs_up
+      thumbs_down
+      created_date
+      updated_date
+      collected_date
+      latitude
+      longitude
+      processed_video_file_path
+      rating
+      subject_id
+      verified
+      video_sharing_link
+      json_sharing_link
+      rating_score
+      status
+      status_reason
+      thumbnail
+      thumbnail_small
+      duration
+      display_duration
+      uploaded_date
+      query_attribute
+      video_state
+      week
+    }
+    nextToken
+  }
+}
+query InstanceByStrVideoId(
+  $video_id: String
+  $activity_name: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrInstancesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  instanceByStrVideoId(
+    video_id: $video_id
+    activity_name: $activity_name
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      instance_id
+      activity_name
+      avg_bbox_height
+      avg_bbox_size
+      avg_bbox_width
+      bad_alignament_score
+      bad_box_big_score
+      bad_box_score
+      bad_box_small_score
+      bad_label_score
+      bad_timing_score
+      bad_video_score
+      bad_viewpoint_score
+      collector_id
+      collection_id
+      end_frame
+      program_id
+      project_id
+      rating_score
+      review_reason
+      s3_path
+      start_frame
+      subject_id
+      created_date
+      updated_date
+      uploaded_date
+      verified
+      video_id
+      week
+      need_review_score
+    }
+    nextToken
+  }
+}
+query InstanceByIntanceId(
+  $instance_id: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrInstancesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  instanceByIntanceId(
+    instance_id: $instance_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      instance_id
+      activity_name
+      avg_bbox_height
+      avg_bbox_size
+      avg_bbox_width
+      bad_alignament_score
+      bad_box_big_score
+      bad_box_score
+      bad_box_small_score
+      bad_label_score
+      bad_timing_score
+      bad_video_score
+      bad_viewpoint_score
+      collector_id
+      collection_id
+      end_frame
+      program_id
+      project_id
+      rating_score
+      review_reason
+      s3_path
+      start_frame
+      subject_id
+      created_date
+      updated_date
+      uploaded_date
+      verified
+      video_id
+      week
+      need_review_score
+    }
+    nextToken
+  }
+}
+query InstanceByWeekUploadedDate(
+  $week: String
+  $uploaded_date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrInstancesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  instanceByWeekUploadedDate(
+    week: $week
+    uploaded_date: $uploaded_date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      instance_id
+      activity_name
+      avg_bbox_height
+      avg_bbox_size
+      avg_bbox_width
+      bad_alignament_score
+      bad_box_big_score
+      bad_box_score
+      bad_box_small_score
+      bad_label_score
+      bad_timing_score
+      bad_video_score
+      bad_viewpoint_score
+      collector_id
+      collection_id
+      end_frame
+      program_id
+      project_id
+      rating_score
+      review_reason
+      s3_path
+      start_frame
+      subject_id
+      created_date
+      updated_date
+      uploaded_date
+      verified
+      video_id
+      week
+      need_review_score
+    }
+    nextToken
+  }
+}
+query InstanceByVideoId(
+  $video_id: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrInstancesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  instanceByVideoId(
+    video_id: $video_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      instance_id
+      activity_name
+      avg_bbox_height
+      avg_bbox_size
+      avg_bbox_width
+      bad_alignament_score
+      bad_box_big_score
+      bad_box_score
+      bad_box_small_score
+      bad_label_score
+      bad_timing_score
+      bad_video_score
+      bad_viewpoint_score
+      collector_id
+      collection_id
+      end_frame
+      program_id
+      project_id
+      rating_score
+      review_reason
+      s3_path
+      start_frame
+      subject_id
+      created_date
+      updated_date
+      uploaded_date
+      verified
+      video_id
+      week
+      need_review_score
+    }
+    nextToken
+  }
+}
+query SubjectByStrSubjectEmail(
+  $subject_email: String
+  $status: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  subjectByStrSubjectEmail(
+    subject_email: $subject_email
+    status: $status
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      collector_id
+      uuid
+      subject_email
+      collector_email
+      last_activity_date
+      consent_response
+      consent_video_id
+      beard
+      ethnicity
+      eye_glasses
+      first_name
+      last_name
+      gender
+      hair_color
+      hair_length
+      uploaded_count
+      verified_count
+      created_date
+      updated_date
+      status
+      count
+      program_id
+      program_name
+      project_id
+      project_name
+    }
+    nextToken
+  }
+}
+query RatingByStrCollectorId(
+  $reviewer_id: String
+  $video_id: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrRatingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  ratingByStrCollectorId(
+    reviewer_id: $reviewer_id
+    video_id: $video_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      reviewer_id
+      up
+      video_id
+      week
+      bad_alignment
+      bad_box_big
+      bad_box_small
+      bad_label
+      bad_timing
+      bad_video
+      bad_viewpoint
+      awkward_scene
+      bad_visibility
+      project_id
+      program_id
+      project_name
+      program_name
+      collection_name
+      collection_id
+      rating_responses
+      bad_diversity
+      submitted_time
+      video_uploaded_date
+    }
+    nextToken
+  }
+}
+query RatingByWeek(
+  $week: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrRatingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  ratingByWeek(
+    week: $week
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      reviewer_id
+      up
+      video_id
+      week
+      bad_alignment
+      bad_box_big
+      bad_box_small
+      bad_label
+      bad_timing
+      bad_video
+      bad_viewpoint
+      awkward_scene
+      bad_visibility
+      project_id
+      program_id
+      project_name
+      program_name
+      collection_name
+      collection_id
+      rating_responses
+      bad_diversity
+      submitted_time
+      video_uploaded_date
+    }
+    nextToken
+  }
+}
+query RatingByReviewerIdWeek(
+  $reviewer_id: String
+  $week: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrRatingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  ratingByReviewerIDWeek(
+    reviewer_id: $reviewer_id
+    week: $week
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      reviewer_id
+      up
+      video_id
+      week
+      bad_alignment
+      bad_box_big
+      bad_box_small
+      bad_label
+      bad_timing
+      bad_video
+      bad_viewpoint
+      awkward_scene
+      bad_visibility
+      project_id
+      program_id
+      project_name
+      program_name
+      collection_name
+      collection_id
+      rating_responses
+      bad_diversity
+      submitted_time
+      video_uploaded_date
+    }
+    nextToken
+  }
+}
+query RatingByVideoId(
+  $video_id: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrRatingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  ratingByVideoID(
+    video_id: $video_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      reviewer_id
+      up
+      video_id
+      week
+      bad_alignment
+      bad_box_big
+      bad_box_small
+      bad_label
+      bad_timing
+      bad_video
+      bad_viewpoint
+      awkward_scene
+      bad_visibility
+      project_id
+      program_id
+      project_name
+      program_name
+      collection_name
+      collection_id
+      rating_responses
+      bad_diversity
+      submitted_time
+      video_uploaded_date
+    }
+    nextToken
+  }
+}
+query StrRatingVideoSortByAssignedDate(
+  $collector_id: ID
+  $assigned_date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrReviewAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  strRatingVideoSortByAssignedDate(
+    collector_id: $collector_id
+    assigned_date: $assigned_date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      collector_id
+      video_id
+      collection_id
+      collection_name
+      program_name
+      program_id
+      project_id
+      project_name
+      duration
+      review_status
+      uploaded_date
+      week
+      instance_ids
+      video_file_path
+      annotation_file_path
+      rating_score
+      thumbnail
+      thumbnail_small
+      assigned_date
+      orientation
+    }
+    nextToken
+  }
+}
+query AssignmentByVideoId(
+  $video_id: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelstrReviewAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  assignmentByVideoId(
+    video_id: $video_id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      collector_id
+      video_id
+      collection_id
+      collection_name
+      program_name
+      program_id
+      project_id
+      project_name
+      duration
+      review_status
+      uploaded_date
+      week
+      instance_ids
+      video_file_path
+      annotation_file_path
+      rating_score
+      thumbnail
+      thumbnail_small
+      assigned_date
+      orientation
+    }
+    nextToken
+  }
+}

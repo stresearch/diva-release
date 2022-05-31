@@ -1,0 +1,46 @@
+{
+    "questions": [{
+            "id": "1",
+            "short_description": "My video will be public, available to anyone for improving computer vision.",
+            "long_description": "My video will be public, available to anyone for improving computer vision.",
+            "agreeTargetID": "3",
+            "disagreeTargetID": "2"
+        }, {
+            "id": "2",
+            "short_description": "My video will be private, available only to these organizations (${PROJECT_TEAM_MEMBERS}) and no one else.",
+            "long_description": "My video will be private, available only to these organizations (${PROJECT_TEAM_MEMBERS}) and no one else.",
+            "agreeTargetID": "3",
+            "disagreeTargetID": "7"
+        }, {
+            "id": "3",
+            "short_description": "My face in this video can be used to improve facial biometrics.",
+            "long_description": "My face in this video can be used to improve facial biometrics.",
+            "agreeTargetID": "4",
+            "disagreeTargetID": "4"
+        }, {
+            "id": "4",
+            "short_description": "My video will be retained indefinitely.",
+            "long_description": "My video will be retained indefinitely.",
+            "agreeTargetID": "6",
+            "disagreeTargetID": "5"
+        }, {
+            "id": "5",
+            "short_description": "My video will be retained for at most 4 years, then deleted.",
+            "long_description": "My video will be retained for at most 4 years, then deleted.",
+            "agreeTargetID": "6",
+            "disagreeTargetID": "7"
+        }, {
+            "id": "6",
+            "short_description": "I can revoke my consent for any video at any time for any reason, and the video will be deleted.",
+            "long_description": "I can revoke my consent for any video at any time for any reason, and the video will be deleted.",
+            "agreeTargetID": "0"
+        },
+        {
+            "id": "7",
+            "short_description": "I do not consent to this data collection.",
+            "long_description": "I do not consent to this data collection.",
+            "disagreeTargetID": "0"
+        }
+    ],
+    "moreInfo": "https://www.stresearch.com"
+}

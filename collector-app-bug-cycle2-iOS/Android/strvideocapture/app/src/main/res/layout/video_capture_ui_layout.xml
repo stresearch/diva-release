@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_capture_portrait_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/option_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/go_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/mediumMargin"
+            android:layout_marginStart="@dimen/titleTextSize"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/titleTextSize"
+            app:srcCompat="@drawable/close"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/flash_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/smallTextSize"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:layout_toStartOf="@id/cancel_button"
+            app:srcCompat="@drawable/ic_flash_off_icon" />
+
+        <ImageView
+            android:id="@+id/q_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_transparent"
+            android:paddingTop="@dimen/mediumMargin"
+            android:paddingBottom="@dimen/mediumMargin"
+            android:paddingStart="@dimen/largeMargin"
+            android:paddingEnd="@dimen/largeMargin"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:layout_toStartOf="@id/flash_button"
+            app:srcCompat="@mipmap/ic_info" />
+
+        <ImageView
+            android:id="@+id/camera_switch_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/largeMargin"
+            app:srcCompat="@drawable/ic_camera"
+            android:layout_toStartOf="@id/q_button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activities_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/recordingFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/timer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.8"
+                android:drawableStart="@drawable/timer_circle"
+                android:background="@android:color/black"
+                android:text=" 00:00"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                android:textColor="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/actionOuterEllipse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ellipse_outer" />
+
+                <ImageView
+                    android:id="@+id/actionInnerEllipse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ellipse" />
+
+                <TextView
+                    android:id="@+id/actionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/start"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

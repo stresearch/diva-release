@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:ls="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".capturemodule.views.EditConsentActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/borderMargin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/borderMargin" />
+
+    <ImageView
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingTop="@dimen/mediumMargin"
+        android:paddingEnd="@dimen/mediumMargin"
+        android:paddingBottom="@dimen/mediumMargin"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="@+id/guideLineV1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:ems="10"
+        android:fontFamily="@font/poppinsextrabold"
+        android:maxLines="2"
+        android:text="@string/consentTitle"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/appTitleTextsize"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@+id/goBackBtn" />
+
+
+    <TextView
+        android:id="@+id/editConsentDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extraLargeMargin"
+        android:layout_marginEnd="@dimen/xextraLargeMargin"
+        android:maxLines="3"
+        android:text="@string/editConsentDescription"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/regTextSize"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/moreInfo"
+        android:padding="@dimen/minuteMargin"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintTop_toBottomOf="@id/editConsentDescription" />
+
+
+    <Button
+        android:id="@+id/retakeConsentBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        android:background="@color/goldColor"
+        android:paddingStart="@dimen/largeMargin"
+        android:paddingEnd="@dimen/largeMargin"
+
+        android:text="@string/retakeVideoConsent"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/accountTextSize"
+        android:layout_marginTop="@dimen/largeMargin"
+        app:layout_constraintTop_toBottomOf="@id/editConsentDescription"
+        />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/datasetReleaseLayout"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@id/retakeConsentBtn"
+        android:layout_marginTop="@dimen/semiSmallMargin">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:paddingStart="12dp"
+        android:background="@drawable/spinner_background"
+        style="@style/TextInputLayoutCustomStyle"
+        android:id="@+id/datasetRelease"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentTop="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/termsText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/dataResponse"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/faceRecognitionUsageLayout"
+        android:layout_marginTop="@dimen/largeMargin"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@id/datasetReleaseLayout">
+       <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/spinner_background"
+           android:paddingStart="12dp"
+        style="@style/TextInputLayoutCustomStyle"
+        android:id="@+id/faceRecognitionUsage"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Shipper"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/termsText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/facerecognition"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/retentionLayout"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        android:layout_marginTop="@dimen/largeMargin"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@id/faceRecognitionUsageLayout">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:paddingStart="12dp"
+        android:background="@drawable/spinner_background"
+        style="@style/TextInputLayoutCustomStyle"
+        android:id="@+id/retention"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:autofillHints="@string/dataResponse"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/termsText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/retention"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+   <!-- <com.visym.collector.utils.LabelledSpinner
+        android:id="@+id/spinner_planets"
+        ls:labelText="@string/dataResponse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@id/faceRecognitionUsage"/>-->
+   <!-- <Spinner
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:background="@drawable/spinner_background"
+    style="@style/TextInputLayoutCustomStyle"
+    android:id="@+id/retention"
+    android:layout_marginTop="18dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:autofillHints="@string/dataResponse"
+    />-->
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editConsentResponseBtn"
+        app:layout_constraintStart_toStartOf="@id/guideLineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@id/retentionLayout"
+        android:text="@string/save"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/regTextSize"
+
+        android:padding="@dimen/mediumMargin"
+        android:layout_marginTop="@dimen/xextraLargeMargin"
+        android:background="@color/darkBlack"
+        android:textColor="@color/textLightColor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

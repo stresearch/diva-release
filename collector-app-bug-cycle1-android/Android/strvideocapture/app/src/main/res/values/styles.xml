@@ -1,0 +1,150 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/goldColor</item>
+    </style>
+    <style name="CustomAppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/goldColor</item>
+    </style>
+        <style name="textBoxAlignmentTheme" parent="Theme.MaterialComponents.Light">
+            <item name="android:layout_marginRight">@dimen/borderMargin</item>
+            <item name="android:layout_marginLeft">@dimen/borderMargin</item>
+            <item name="android:layout_marginStart">@dimen/borderMargin</item>
+            <item name="android:layout_marginEnd">@dimen/borderMargin</item>
+        </style>
+    <style name="TextInputTypeOverride" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/goldColor</item>
+
+        <item name="boxCornerRadiusBottomEnd">@dimen/zero</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/zero</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/zero</item>
+        <item name="boxCornerRadiusTopStart">@dimen/zero</item>
+        <item name="android:theme">@style/TextInputTheme</item>
+        <item name="android:layout_marginRight">@dimen/zero</item>
+        <item name="android:layout_marginLeft">@dimen/zero</item>
+        <item name="android:layout_marginStart">@dimen/zero</item>
+        <item name="android:layout_marginEnd">@dimen/zero</item>
+
+    </style>
+
+    <style name="TextInputTheme">
+        <!--for changing the label theme-->
+        <item name="android:textSize">13sp</item>
+
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/termsText</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily" >@font/poppinsregular</item>
+    </style>
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/goldColor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+    </style>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/transparent</item>
+        <item name="android:progressTint">@color/goldColor</item>
+        <item name="android:colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="fontPoppinsMedium" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/poppinsmedium</item>
+        <item name="android:textSize">@dimen/regTextSize</item>
+    </style>
+
+    <style name="TransparentProgressDialogWithPngImage" parent="android:Theme.Dialog"> 
+        <item name="android:windowFrame">@null</item>       
+        <item name="android:windowBackground">@android:color/transparent</item>       
+        <item name="android:windowIsFloating">true</item>       
+        <item name="android:windowContentOverlay">@null</item>       
+        <item name="android:windowTitleStyle">@null</item>       
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>       
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>       
+        <item name="android:backgroundDimEnabled">true</item>       
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TransparentProgressDialogWithPngImage2" parent="android:Theme.Dialog"> 
+        <item name="android:windowFrame">@null</item>       
+        <item name="android:windowBackground">@android:color/transparent</item>       
+        <item name="android:windowIsFloating">true</item>       
+
+        <item name="android:windowContentOverlay">@null</item>       
+        <item name="android:windowTitleStyle">@null</item>       
+         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>       
+        <item name="android:backgroundDimEnabled">true</item>       
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@android:color/black</item>
+    </style>
+
+    <style name="TextInputLayoutCustomStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/goldColor</item>
+        <!--for changing the label theme-->
+        <item name="android:textColorHint">@color/hintTextColor</item>
+        <item name="android:theme">@style/TextInputLayoutCustomTheme</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/text_input_layout_box_corner_radius_2_dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/text_input_layout_box_corner_radius_2_dp
+        </item>
+        <item name="boxCornerRadiusTopEnd">@dimen/text_input_layout_box_corner_radius_2_dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/text_input_layout_box_corner_radius_2_dp</item>
+        <item name="android:importantForAutofill" tools:targetApi="o">noExcludeDescendants</item>
+    </style>
+
+    <style name="TextInputLayoutCustomTheme">
+        <!--for changing the label theme-->
+        <item name="android:textSize">16sp</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/poppinsregular
+        </item>
+    </style>
+
+    <style name="previewSeekBarTheme" parent="Widget.AppCompat.SeekBar" >
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/poppinsbold
+        </item>
+
+    </style>
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#000000</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#000000</item>
+        <!-- Used for the background -->
+        <item name="android:background">#ffffff</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+</resources>

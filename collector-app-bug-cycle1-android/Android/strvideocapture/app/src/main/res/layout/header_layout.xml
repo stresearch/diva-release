@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/exextraLargeMargin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guideVLine1"
+        app:layout_constraintGuide_percent="0.08"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guideVLine2"
+        app:layout_constraintGuide_percent="0.90"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideHLine1"
+        app:layout_constraintGuide_percent="0.15"/>
+<androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideHLine2"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/visyLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/visym_logo"
+        app:layout_constraintEnd_toEndOf="@id/guideVLine2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideVLine1"
+        app:layout_constraintTop_toTopOf="@id/guideHLine1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tracey Prince"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:textColor="@color/darkBlack"
+        android:textSize="@dimen/titleTextSize"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="@id/guideVLine2"
+        app:layout_constraintStart_toStartOf="@id/guideVLine1"
+        app:layout_constraintTop_toBottomOf="@+id/visyLogo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="umang.burman.micro@gmail.com"
+        android:textColor="@color/termsText"
+        android:textSize="@dimen/regTextSize"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideVLine1"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

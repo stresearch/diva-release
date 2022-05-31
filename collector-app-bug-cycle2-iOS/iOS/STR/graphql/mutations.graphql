@@ -1,0 +1,940 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateStrCollections(
+  $input: CreateStrCollectionsInput!
+  $condition: ModelstrCollectionsConditionInput
+) {
+  createStrCollections(input: $input, condition: $condition) {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+mutation UpdateStrCollections(
+  $input: UpdateStrCollectionsInput!
+  $condition: ModelstrCollectionsConditionInput
+) {
+  updateStrCollections(input: $input, condition: $condition) {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+mutation DeleteStrCollections(
+  $input: DeleteStrCollectionsInput!
+  $condition: ModelstrCollectionsConditionInput
+) {
+  deleteStrCollections(input: $input, condition: $condition) {
+    id
+    name
+    project_id
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    object_id
+    objects_list
+    activities
+    activity_short_names
+    created_date
+    updated_date
+    collection_id
+    default_object
+    active
+  }
+}
+mutation CreateStrProjects(
+  $input: CreateStrProjectsInput!
+  $condition: ModelstrProjectsConditionInput
+) {
+  createStrProjects(input: $input, condition: $condition) {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+mutation UpdateStrProjects(
+  $input: UpdateStrProjectsInput!
+  $condition: ModelstrProjectsConditionInput
+) {
+  updateStrProjects(input: $input, condition: $condition) {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+mutation DeleteStrProjects(
+  $input: DeleteStrProjectsInput!
+  $condition: ModelstrProjectsConditionInput
+) {
+  deleteStrProjects(input: $input, condition: $condition) {
+    id
+    name
+    activity_count
+    created_date
+    updated_date
+    project_id
+  }
+}
+mutation CreateStrActivities(
+  $input: CreateStrActivitiesInput!
+  $condition: ModelstrActivitiesConditionInput
+) {
+  createStrActivities(input: $input, condition: $condition) {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+mutation UpdateStrActivities(
+  $input: UpdateStrActivitiesInput!
+  $condition: ModelstrActivitiesConditionInput
+) {
+  updateStrActivities(input: $input, condition: $condition) {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+mutation DeleteStrActivities(
+  $input: DeleteStrActivitiesInput!
+  $condition: ModelstrActivitiesConditionInput
+) {
+  deleteStrActivities(input: $input, condition: $condition) {
+    id
+    activity_id
+    name
+    collection_id
+    project_id
+    program_id
+    counts
+    short_name
+    created_date
+    updated_date
+  }
+}
+mutation CreateStrProgram(
+  $input: CreateStrProgramInput!
+  $condition: ModelstrProgramConditionInput
+) {
+  createStrProgram(input: $input, condition: $condition) {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+mutation UpdateStrProgram(
+  $input: UpdateStrProgramInput!
+  $condition: ModelstrProgramConditionInput
+) {
+  updateStrProgram(input: $input, condition: $condition) {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+mutation DeleteStrProgram(
+  $input: DeleteStrProgramInput!
+  $condition: ModelstrProgramConditionInput
+) {
+  deleteStrProgram(input: $input, condition: $condition) {
+    id
+    name
+    program_id
+    client
+    created_date
+  }
+}
+mutation CreateStrCollector(
+  $input: CreateStrCollectorInput!
+  $condition: ModelstrCollectorConditionInput
+) {
+  createStrCollector(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+mutation UpdateStrCollector(
+  $input: UpdateStrCollectorInput!
+  $condition: ModelstrCollectorConditionInput
+) {
+  updateStrCollector(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+mutation DeleteStrCollector(
+  $input: DeleteStrCollectorInput!
+  $condition: ModelstrCollectorConditionInput
+) {
+  deleteStrCollector(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    first_name
+    last_name
+    password
+    query_attribute
+    is_consented
+    is_dropbox_integrated
+    is_paypal_integrated
+    dropbox_token
+    paypal_email_id
+    uploaded_count
+    verified_count
+    not_verified_count
+    consented_count
+    authorized
+    outstanding_amount
+    collector_score
+    reviewer_score
+  }
+}
+mutation CreateStrCollectionsAssignment(
+  $input: CreateStrCollectionsAssignmentInput!
+  $condition: ModelstrCollectionsAssignmentConditionInput
+) {
+  createStrCollectionsAssignment(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+mutation UpdateStrCollectionsAssignment(
+  $input: UpdateStrCollectionsAssignmentInput!
+  $condition: ModelstrCollectionsAssignmentConditionInput
+) {
+  updateStrCollectionsAssignment(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+mutation DeleteStrCollectionsAssignment(
+  $input: DeleteStrCollectionsAssignmentInput!
+  $condition: ModelstrCollectionsAssignmentConditionInput
+) {
+  deleteStrCollectionsAssignment(input: $input, condition: $condition) {
+    collector_id
+    collector_email
+    collection_name
+    project_id
+    project_name
+    program_id
+    program_name
+    training_video_url
+    training_video_json_url
+    training_videos
+    training_videos_low
+    collection_description
+    objects_list
+    collection_id
+    default_object
+    activities
+    training_videos_overlay
+    activity_short_names
+    active
+    isTrainingVideoEnabled
+    isConsentRequired
+    consent_overlay_text
+  }
+}
+mutation CreateStrVideos(
+  $input: CreateStrVideosInput!
+  $condition: ModelstrVideosConditionInput
+) {
+  createStrVideos(input: $input, condition: $condition) {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+mutation UpdateStrVideos(
+  $input: UpdateStrVideosInput!
+  $condition: ModelstrVideosConditionInput
+) {
+  updateStrVideos(input: $input, condition: $condition) {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+mutation DeleteStrVideos(
+  $input: DeleteStrVideosInput!
+  $condition: ModelstrVideosConditionInput
+) {
+  deleteStrVideos(input: $input, condition: $condition) {
+    id
+    raw_video_file_path
+    annotation_file_path
+    video_id
+    collector_id
+    project_id
+    collection_id
+    collection_name
+    activities_list
+    object_label_list
+    thumbs_up
+    thumbs_down
+    created_date
+    updated_date
+    collected_date
+    latitude
+    longitude
+    processed_video_file_path
+    rating
+    subject_id
+    verified
+    video_sharing_link
+    json_sharing_link
+    rating_score
+    status
+    status_reason
+    thumbnail
+    thumbnail_small
+    duration
+    display_duration
+    uploaded_date
+    query_attribute
+    video_state
+    week
+  }
+}
+mutation CreateStrInstances(
+  $input: CreateStrInstancesInput!
+  $condition: ModelstrInstancesConditionInput
+) {
+  createStrInstances(input: $input, condition: $condition) {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+mutation UpdateStrInstances(
+  $input: UpdateStrInstancesInput!
+  $condition: ModelstrInstancesConditionInput
+) {
+  updateStrInstances(input: $input, condition: $condition) {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+mutation DeleteStrInstances(
+  $input: DeleteStrInstancesInput!
+  $condition: ModelstrInstancesConditionInput
+) {
+  deleteStrInstances(input: $input, condition: $condition) {
+    id
+    instance_id
+    activity_name
+    avg_bbox_height
+    avg_bbox_size
+    avg_bbox_width
+    bad_alignament_score
+    bad_box_big_score
+    bad_box_score
+    bad_box_small_score
+    bad_label_score
+    bad_timing_score
+    bad_video_score
+    bad_viewpoint_score
+    collector_id
+    collection_id
+    end_frame
+    program_id
+    project_id
+    rating_score
+    review_reason
+    s3_path
+    start_frame
+    subject_id
+    created_date
+    updated_date
+    uploaded_date
+    verified
+    video_id
+    week
+    need_review_score
+  }
+}
+mutation CreateStrSubject(
+  $input: CreateStrSubjectInput!
+  $condition: ModelstrSubjectConditionInput
+) {
+  createStrSubject(input: $input, condition: $condition) {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+mutation UpdateStrSubject(
+  $input: UpdateStrSubjectInput!
+  $condition: ModelstrSubjectConditionInput
+) {
+  updateStrSubject(input: $input, condition: $condition) {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+mutation DeleteStrSubject(
+  $input: DeleteStrSubjectInput!
+  $condition: ModelstrSubjectConditionInput
+) {
+  deleteStrSubject(input: $input, condition: $condition) {
+    collector_id
+    uuid
+    subject_email
+    collector_email
+    last_activity_date
+    consent_response
+    consent_video_id
+    beard
+    ethnicity
+    eye_glasses
+    first_name
+    last_name
+    gender
+    hair_color
+    hair_length
+    uploaded_count
+    verified_count
+    created_date
+    updated_date
+    status
+    count
+    program_id
+    program_name
+    project_id
+    project_name
+  }
+}
+mutation CreateStrRating(
+  $input: CreateStrRatingInput!
+  $condition: ModelstrRatingConditionInput
+) {
+  createStrRating(input: $input, condition: $condition) {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+mutation UpdateStrRating(
+  $input: UpdateStrRatingInput!
+  $condition: ModelstrRatingConditionInput
+) {
+  updateStrRating(input: $input, condition: $condition) {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+mutation DeleteStrRating(
+  $input: DeleteStrRatingInput!
+  $condition: ModelstrRatingConditionInput
+) {
+  deleteStrRating(input: $input, condition: $condition) {
+    id
+    reviewer_id
+    up
+    video_id
+    week
+    bad_alignment
+    bad_box_big
+    bad_box_small
+    bad_label
+    bad_timing
+    bad_video
+    bad_viewpoint
+    awkward_scene
+    bad_visibility
+    project_id
+    program_id
+    project_name
+    program_name
+    collection_name
+    collection_id
+    rating_responses
+    bad_diversity
+    submitted_time
+    video_uploaded_date
+  }
+}
+mutation CreateStrConsentQuestionnaire(
+  $input: CreateStrConsentQuestionnaireInput!
+  $condition: ModelstrConsentQuestionnaireConditionInput
+) {
+  createStrConsentQuestionnaire(input: $input, condition: $condition) {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+mutation UpdateStrConsentQuestionnaire(
+  $input: UpdateStrConsentQuestionnaireInput!
+  $condition: ModelstrConsentQuestionnaireConditionInput
+) {
+  updateStrConsentQuestionnaire(input: $input, condition: $condition) {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+mutation DeleteStrConsentQuestionnaire(
+  $input: DeleteStrConsentQuestionnaireInput!
+  $condition: ModelstrConsentQuestionnaireConditionInput
+) {
+  deleteStrConsentQuestionnaire(input: $input, condition: $condition) {
+    id
+    consent_id
+    short_description
+    long_description
+    agree_question_id
+    disagree_question_id
+    category
+    category_response
+    created_date
+    updated_date
+    program_id
+    project_id
+    collection_id
+    collection_name
+    more_info
+    consent_question_type
+  }
+}
+mutation CreateStrReviewAssignment(
+  $input: CreateStrReviewAssignmentInput!
+  $condition: ModelstrReviewAssignmentConditionInput
+) {
+  createStrReviewAssignment(input: $input, condition: $condition) {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}
+mutation UpdateStrReviewAssignment(
+  $input: UpdateStrReviewAssignmentInput!
+  $condition: ModelstrReviewAssignmentConditionInput
+) {
+  updateStrReviewAssignment(input: $input, condition: $condition) {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}
+mutation DeleteStrReviewAssignment(
+  $input: DeleteStrReviewAssignmentInput!
+  $condition: ModelstrReviewAssignmentConditionInput
+) {
+  deleteStrReviewAssignment(input: $input, condition: $condition) {
+    collector_id
+    video_id
+    collection_id
+    collection_name
+    program_name
+    program_id
+    project_id
+    project_name
+    duration
+    review_status
+    uploaded_date
+    week
+    instance_ids
+    video_file_path
+    annotation_file_path
+    rating_score
+    thumbnail
+    thumbnail_small
+    assigned_date
+    orientation
+  }
+}

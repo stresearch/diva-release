@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/preview_rootview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <VideoView
+        android:id="@+id/preview_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="top"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/MySeekBar" />
+
+    <ImageButton
+        android:id="@+id/pause_play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_background_transparent"
+        app:srcCompat="@drawable/ic_play_icon"
+        android:padding="@dimen/largeMargin"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/option_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cancel_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/largeMargin"
+            android:alpha="0.7"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/smallTextSize"
+            app:srcCompat="@drawable/close" />
+
+        <ImageView
+            android:id="@+id/edit_video_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/titleTextSize"
+            android:alpha="0.7"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:layout_toStartOf="@id/retake_image_view"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/smallMargin"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/retake_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:alpha="0.7"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="@dimen/extraSmallMargin"
+            app:srcCompat="@drawable/retake_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/seekbar_background_transparent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/running_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"/>
+
+            <SeekBar
+                android:id="@+id/progress_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/MySeekBar" />
+
+            <TextView
+                android:id="@+id/total_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/submit_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/mediumMargin"
+                android:paddingEnd="@dimen/mediumMargin"
+                android:paddingTop="@dimen/text_input_layout_box_corner_radius_4_dp"
+                android:paddingBottom="@dimen/text_input_layout_box_corner_radius_4_dp"
+                android:layout_margin="@dimen/mediumMargin"
+                android:background="@drawable/view_gold_baground"
+                android:text="@string/submit"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/bounding_box_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'realm-android'
+apply plugin: 'com.amazonaws.appsync'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/jebyrne/Visym Dropbox/Jeffrey Byrne (jeff)/DIVA/visym-collector.jks')
+            storePassword '654321'
+            keyAlias 'visym'
+            keyPassword '654321'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.visym.collector"
+        minSdkVersion 29
+        targetSdkVersion 30
+        versionCode 73  // should match iOS version
+        versionName "2.6.15"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+        renderscriptSupportModeEnabled true    // JEBYRNE
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src/main/assets', 'src/main/assets/'
+            }
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//Retrofit
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'io.reactivex:rxjava:1.3.4'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.7.1'
+
+
+    //HTTP logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.0'
+
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
+
+    //Amplify
+    implementation 'com.amplifyframework:core:0.9.1'
+    implementation 'com.amplifyframework:aws-api:0.9.1'
+
+    // Google play services
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.1'
+
+    //AppSync SDK
+    implementation 'com.amazonaws:aws-android-sdk-appsync:2.8.3'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // S3
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.16.8'
+    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.16.12@aar') { transitive = true }
+    implementation('com.amazonaws:aws-android-sdk-auth-userpools:2.16.12@aar') { transitive = true }
+
+    implementation 'org.apache.commons:commons-io:1.3.2'
+
+    //Glide
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    //dropbox
+    implementation 'com.dropbox.core:dropbox-core-sdk:3.1.3'
+
+    //paypal
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+
+    implementation 'com.google.android.gms:play-services-vision:20.1.0'
+
+}

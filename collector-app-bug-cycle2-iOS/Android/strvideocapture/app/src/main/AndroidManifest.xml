@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.visym.collector">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.level.full" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_PERMISSION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".utils.Globals"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".capturemodule.views.VideoEditorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dashboardmodule.Projects"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.EditConsentActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.ConsentVideoCaptureActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.ConsentConfirmationActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.CollectionDetailsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.CollectionsActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".dashboardmodule.view.DashboardActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.UserProfileEditActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.UserProfileActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.UserSetUpActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.ForgotPasswordActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.EmailVerificationActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.LoginActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.SignUpActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".usermodule.view.FrontScreenActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity
+            android:name=".capturemodule.views.VideoCaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity
+            android:name=".capturemodule.views.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".capturemodule.views.VideoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".network.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <data android:scheme="---" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name=".helper.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+
+</manifest>

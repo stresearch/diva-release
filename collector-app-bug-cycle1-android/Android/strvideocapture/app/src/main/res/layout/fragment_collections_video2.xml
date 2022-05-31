@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboardmodule.view.CollectionFragment">
+
+    <com.visym.collector.utils.MyDrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menuDrawerLayout">
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/borderMargin"
+                android:id="@+id/guideLineV1"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/borderMargin"
+                android:id="@+id/guidelineV2"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.13"
+                android:id="@+id/guideLineH1"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.22"
+                android:id="@+id/guideLineH2"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menuIcon"
+                android:padding="@dimen/mediumMargin"
+                android:src="@drawable/ic_menu_black_temp"
+                app:layout_constraintBottom_toTopOf="@id/guideLineH1"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                android:layout_marginBottom="@dimen/extraLargeMargin" />
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/guideLineH1"
+                android:text="@string/videos_text"
+                android:textAllCaps="true"
+                android:textSize="@dimen/appTitleTextsize"
+                android:id="@+id/titleText"
+                android:gravity="center"
+                android:textColor="@color/darkBlack"
+                android:fontFamily="@font/poppinsextrabold"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toEndOf="@id/guidelineV2"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty_illustration"
+                app:layout_constraintTop_toBottomOf="@id/guideLineH2"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+                android:id="@+id/emptyVideoScreenImage"
+                android:layout_marginTop="@dimen/extraLargeMargin"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/noVideoText"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+                app:layout_constraintTop_toBottomOf="@id/emptyVideoScreenImage"
+                android:text="@string/noVideos"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="@dimen/regTextSize"
+                android:textColor="@color/darkBlack"
+                android:layout_marginTop="@dimen/mediumMargin"
+                android:textAlignment="center"
+                android:layout_marginEnd="@dimen/borderMargin"
+                android:layout_marginStart="@dimen/borderMargin"
+                android:layout_marginRight="@dimen/borderMargin"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/noVideoTextDescription"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+                app:layout_constraintTop_toBottomOf="@id/noVideoText"
+                android:text="@string/noVideosDescription"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="@dimen/smallTextSize"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/captureActivity"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="@dimen/regTextSize"
+                android:textColor="@color/textLightColor"
+                android:background="@color/darkBlack"
+                android:padding="@dimen/smallMargin"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+                app:layout_constraintTop_toBottomOf="@id/noVideoTextDescription"
+                android:layout_marginTop="@dimen/extraLargeMargin"
+                android:id="@+id/captureActivityBtn"/>
+
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/emptyVideoScreenGroup"
+                app:constraint_referenced_ids="emptyVideoScreenImage,noVideoText,noVideoTextDescription,captureActivityBtn"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="@id/guideLineV1"
+                app:layout_constraintEnd_toStartOf="@id/guidelineV2"
+                app:layout_constraintTop_toBottomOf="@id/guideLineH2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical">
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/swiperefresh2">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+
+                        android:id="@+id/myVideosListRecyclerView"
+                        android:layout_marginBottom="@dimen/extraLargeMargin"/>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:itemHorizontalPadding="27dp"
+            app:itemTextAppearance="@style/NavigationTheme"
+            app:headerLayout="@layout/header_layout"
+            style="@style/NavigationTheme"
+            app:menu="@menu/drawer_menu">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/footer_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Footer Item 1"
+                    android:layout_marginBottom="@dimen/extraLargeMargin"/>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </com.visym.collector.utils.MyDrawerLayout>
+</FrameLayout>

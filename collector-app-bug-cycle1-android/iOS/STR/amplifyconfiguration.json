@@ -1,0 +1,83 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "AdminQueries": {
+                    "endpointType": "REST",
+                    "endpoint": "https://eggvmuyqog.execute-api.us-east-1.amazonaws.com/visymcdev",
+                    "region": "us-east-1",
+                    "authorizationType": "AWS_IAM"
+                },
+                "visymApi": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://yqynunvkt5b6dczzyslgijukuy.appsync-api.us-east-1.amazonaws.com/graphql",
+                    "region": "us-east-1",
+                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
+                }
+            }
+        }
+    },
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify/cli",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "",
+                            "Region": "us-east-1"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "",
+                        "AppClientId": "",
+                        "AppClientSecret": "",
+                        "Region": "us-east-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH"
+                    }
+                },
+                "AppSync": {
+                    "Default": {
+                        "ApiUrl": "https://yqynunvkt5b6dczzyslgijukuy.appsync-api.us-east-1.amazonaws.com/graphql",
+                        "Region": "us-east-1",
+                        "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+                        "ClientDatabasePrefix": "visymApi_AMAZON_COGNITO_USER_POOLS"
+                    },
+                    "visymApi_AWS_IAM": {
+                        "ApiUrl": "https://yqynunvkt5b6dczzyslgijukuy.appsync-api.us-east-1.amazonaws.com/graphql",
+                        "Region": "us-east-1",
+                        "AuthMode": "AWS_IAM",
+                        "ClientDatabasePrefix": "visymApi_AWS_IAM"
+                    }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "visym-data-lake213217-visymcdev",
+                        "Region": "us-east-1"
+                    }
+                }
+            }
+        }
+    },
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "visym-data-lake213217-visymcdev",
+                "region": "us-east-1",
+                "defaultAccessLevel": "guest"
+            }
+        }
+    }
+}
