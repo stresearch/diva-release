@@ -32,7 +32,7 @@ public class ApiServiceGenerator {
              authorization="Bearer "+datafetcher;
         }else {
             contentType="application/x-www-form-urlencoded";
-            authorization="Basic QVVwa0RGcHNNVUZob1JBcmZWY0g3RWcxOUNjUnNfVy0yZ2pKMGdwQTRLbm1pMi13MmxTamgwWVdPdm1qZ0V6aWptX1p0aHlqSlB2SG93eGE6RU1TMm1vYm9fQmdWclpVaHBvZmQ0N0ZqTWMwTE43TmxjaURfS0o5UmdXdFRZM2hRTTdqOEVmU1Y2c2FLa0lVdXpKcThkSkFCUV91dC1sTHE=";
+            authorization="< Your OAuth2 Keys >";
         }
     }
 
